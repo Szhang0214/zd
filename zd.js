@@ -1,28 +1,27 @@
 var fs = require('fs');
 var path = require('path');
-var utils=require('./utils');
-var makeDocx=require('./utils').makeDocx;
-const unzip=require('unzip');
-const process=require('process');
-const modify_doc=require('./modify_doc').modify_doc;
-const rd=require('rd');
-const iconv=require('iconv-lite');
+var utils = require('./utils');
+var makeDocx = require('./utils').makeDocx;
+const unzip = require('unzip');
+const process = require('process');
+const modify_doc = require('./modify_doc').modify_doc;
+const rd = require('rd');
+const iconv = require('iconv-lite');
 require('./utils').extend_Date()
 
 //年丰盈五个月报告
-var sy_file='收益.csv';
-var tpl_path='word_tpls';
-var tpl_tmp_path='output';
+var sy_file = '收益.csv';
+var tpl_path = 'word_tpls';
+var tpl_tmp_path = 'output';
 var tpl_files;//模板文件数组
 
-var curDate=new Date();
+var curDate = new Date();
 // console.log(d.format("yyyy/MM/dd"));
 //
 // process.exit(-1);
-createTplDirs(tpl_path,tpl_tmp_path);
+createTplDirs(tpl_path, tpl_tmp_path);
 
 makeDocxs(tpl_tmp_path);
-
 
 
 function getDocxTmpDir(file, output_dir) {
@@ -57,8 +56,8 @@ function createTplDir(file, output_dir) {
 // -end 创建目录
 }
 
-function unzipFile(file,callback) {
-    fs.createReadStream(file).pipe(unzip.Extract({path: getDocxTmpDir(file,tpl_tmp_path)})).on('close', function (err) {
+function unzipFile(file, callback) {
+    fs.createReadStream(file).pipe(unzip.Extract({path: getDocxTmpDir(file, tpl_tmp_path)})).on('close', function (err) {
         if (err) throw err;
         console.log('解压完成');
         callback();
@@ -99,9 +98,9 @@ function makeDocxs(tpl_tmp_path) {
             "R初始出借日期": "2017.02.28",
             "R初始出借金额": "50,000.00",
             "R报告日资产": "55，000.00",
-            "yyyy":"/分隔的报告日期-年",
-            "mm":"/分隔的报告日期-月",
-            "dd":"/分隔的报告日期-日",
+            "yyyy": "/分隔的报告日期-年",
+            "mm": "/分隔的报告日期-月",
+            "dd": "/分隔的报告日期-日",
         },
         part: {
             //收益信息
@@ -136,13 +135,14 @@ function makeDocxs(tpl_tmp_path) {
         for (var code in userBills) {
             var rows = userBills[code];
 
-            var tplFile=tpl_path+"/nfy/nfy_"+rows.length+".docx";//TODO 根据产品修改
+            var n = rows.length == 1 ? 1 : 2;
+            var tplFile = tpl_path + "/nfy/nfy_" + n + ".docx";//TODO 根据产品修改
             console.log(tplFile)
-            unzipFile(tplFile,function () {
+            unzipFile(tplFile, function () {
                 //修改内容
-                var docPath = tpl_tmp_path+'/nfy_'+rows.length;//解压后的文件路径
-                var fileToModify=docPath+'/word/document.xml';
-                var document=fs.readFileSync(fileToModify,'utf8');
+                var docPath = tpl_tmp_path + '/nfy_' + n;//解压后的文件路径
+                var fileToModify = docPath + '/word/document.xml';
+                var document = fs.readFileSync(fileToModify, 'utf8');
                 //根据收益表修改内容
                 var first = true;
                 if (first) {
@@ -159,9 +159,9 @@ function makeDocxs(tpl_tmp_path) {
                     map.global.R报告日资产 = rows[rows.length - 1][pos_total_money];//报告日资产
                     first = false;
                     //替换
-                    for(var r1 in map.global){
-                        var e=new RegExp(r1,'g');//全局替换
-                        document=document.replace(e,map.global[r1]);
+                    for (var r1 in map.global) {
+                        var e = new RegExp(r1, 'g');//全局替换
+                        document = document.replace(e, map.global[r1]);
                     }
                 }
                 //列表单独的信息
@@ -173,14 +173,14 @@ function makeDocxs(tpl_tmp_path) {
                     map.part.R1报告日资产 = rows[j][pos_total_money];
                     map.part.R1报告日收益 = rows[j][pos_profit];
                     //局部替换
-                    for(var r1 in map.part){
-                        var e=new RegExp(r1);//局部替换
-                        document=document.replace(e,map.part[r1]);
+                    for (var r1 in map.part) {
+                        var e = new RegExp(r1);//局部替换
+                        document = document.replace(e, map.part[r1]);
                     }
                 }
-                fs.writeFileSync(fileToModify,document);
+                fs.writeFileSync(fileToModify, document);
                 //文件改好了，应该压缩成docx,然后删除目录继续下一个
-                utils.makeDocx(docPath,rows[0][pos_user]+curDate.format("yy年MM月账单")+".docx");
+                utils.makeDocx(docPath, rows[0][pos_user] + curDate.format("yy年MM月账单") + ".docx");
             });
 
 

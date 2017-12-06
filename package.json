@@ -1,0 +1,30 @@
+{
+  "name": "word-html",
+  "version": "1.0.0",
+  "description": "既有债权列表：填写上个月的数据，程序会在制作账单时会自动增加这个月的数据。 账单原始数据：客户的基本信息，出借编号等。",
+  "main": "dom.js",
+  "dependencies": {
+    "archiver": "^2.1.0",
+    "cheerio": "^1.0.0-rc.2",
+    "iconv-lite": "^0.4.19",
+    "jszip": "^3.1.5",
+    "node-xlsx": "^0.11.2",
+    "node-zip": "^1.1.1",
+    "rd": "^1.1.2",
+    "unzip": "^0.1.11"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xueleixi/docx-template-modify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xueleixi/docx-template-modify/issues"
+  },
+  "homepage": "https://github.com/xueleixi/docx-template-modify#readme"
+}
