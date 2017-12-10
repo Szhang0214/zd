@@ -35,21 +35,15 @@ function readFile(dir, sep) {
     // 同步列出目录下的所有文件
     var files = rd.readFileSync(dir);
     var shortFiles = [];
-    // console.log(files.length)
     files.forEach(function (v, idx, arr) {
         var index = v.indexOf(sep) + sep.length + 1;
         var zipName = v.substring(index);
         if (v.indexOf('word/document.xml') != -1) {
             console.log(v);
-
             // 2017/07/30
         }
         shortFiles.push(zipName);
     });
-    // console.log(files.length);
-    // for(i=0;i<files.length;i++){
-    //     console.log(shortFiles[i]+"\t\t=>"+files[i]);
-    // }
     return [shortFiles, files];
 }
 
@@ -59,7 +53,7 @@ function zip(filesArr, filename) {
         return false;
     }
     filename = filename || 'test.zip';
-    console.log("filename =" + filename);
+
     var shortFiles = filesArr[0];
     var files = filesArr[1];
 
@@ -69,7 +63,8 @@ function zip(filesArr, filename) {
         zip.file(shortFiles[i], fs.readFileSync(files[i]));
     }
     var data = zip.generate({base64: false, compression: 'DEFLATE'});
-// it's important to use *binary* encode
+    filename = `生成的账单/${filename}`;
+    console.log("filename =" + filename);
     fs.writeFileSync(filename, data, 'binary');
 }
 
@@ -95,13 +90,13 @@ function deleteAll(path) {
  * @param fileName
  */
 function makeDocx(docsDir, fileName) {
-    console.log("makeDocx start");
+    // console.log("makeDocx start");
     fileName = fileName || new Date().getTime() + ".docx"
     var sep = docsDir.substring(docsDir.lastIndexOf('/'));
     var filesArr = readFile(docsDir, sep);
     zip(filesArr, fileName);
-    deleteAll(docsDir);
-    console.log("makeDocx end");
+    // deleteAll(docsDir);
+    // console.log("makeDocx end");
 
 }
 
@@ -168,14 +163,6 @@ function readXlsx(filename) {
     // Parse a file
     const workSheetsFromFile = xlsx.parse(filename);
     let sheet1 = workSheetsFromFile[0]['data'];
-    // for(var i=0;i<sheet1.length;i++){
-    //     for(var j=0;j<sheet1[i].length;j++){
-    //         console.log(sheet1[i][j]);
-    //         console.log(typeof sheet1[i][j]);
-    //         // sheet1[i][j]=sheet1[i][j].trim();
-    //         // process.exit(-1);
-    //     }
-    // }
     return sheet1;
 }
 function deepCopy(source) {
@@ -236,6 +223,9 @@ function createDirIfNonExist(output_dir) {
     //生成output目录
     if (!fs.existsSync(output_dir)) {
         fs.mkdirSync(output_dir);
+    }else {
+        deleteAll(output_dir);
+        fs.mkdirSync(output_dir);
     }
 }
 /**
@@ -254,7 +244,6 @@ function unzipFile(file,output,...args) {
         .pipe(unzip.Extract({path: docxTmpDir}))
         .on('close', function (err) {
             if (err) throw err;
-            console.log('解压完成');
             callback(docxTmpDir,...args);
         });
 }

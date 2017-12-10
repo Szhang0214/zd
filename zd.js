@@ -176,14 +176,14 @@ let userJq = {};//code=>[]
 convertUserBills();
 //生成债权
 convertUserJq();
-console.log(userJq);
+// console.log(userJq);
 // 对账单中的占位符进行替换
 replaceData();
 
 function replaceData() {
     for (let code in userBills) {
         let rows = userBills[code];
-        console.log("-------" + rows[0][posZd.user]);
+        // console.log("-------" + rows[0][posZd.user]);
 
         let tplFile = `${tpl_path}/`;
         let product = rows[0][posZd.product].trim();
@@ -207,7 +207,7 @@ function replaceData() {
             default:
                 error(`未知产品类型:${product}`)
         }
-        print('模板文件：',tplFile);
+        // print('模板文件：',tplFile);
 
         unzipFile(tplFile, tpl_tmp_path,rows, code, function (docPath, rows, code) {
             //异步处理，定义局部变量
@@ -229,7 +229,7 @@ function replaceData() {
                 map.global.RLT_BG_MONEY = Number(rows[0][posZd.lent_money]).formatMoney();
                 map.global.RRPD_MONEY = Number(rows[rows.length - 1][posZd.total_money]).formatMoney();//报告日资产
                 let reportDate = new Date(map.global.RRPT_DATE);
-                console.log(map.global.RRPT_DATE);
+                // console.log(map.global.RRPT_DATE);
                 map.global.yyyy = reportDate.format('yyyy');
                 map.global.mm = reportDate.format('MM');
                 map.global.dd = reportDate.format('dd');
@@ -295,7 +295,7 @@ function replaceData() {
                     map.zq.part.R2_MTH = jqRows[j][posJq.repay_months];
                     map.zq.part.R2_REM = jqRows[j][posJq.remain_months];
                     map.zq.part.R2_RATE = Number(jqRows[j][posJq.rate] * 100).toFixed(2) + '%';
-                    console.log("-----" + map.zq.part.R2BORROWER_MONEY2 + ';' + map.zq.part.R2BORROWER_RPM);
+                    // console.log("-----" + map.zq.part.R2BORROWER_MONEY2 + ';' + map.zq.part.R2BORROWER_RPM);
                     R2_SUM1 += Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', ''));
 
                     R2_SUM2 += Number((map.zq.part.R2BORROWER_RPM + '').replace(',', ''));
@@ -311,7 +311,7 @@ function replaceData() {
                         //R2BORROWER_MONEY2
                         map.zqzr.global.R3BORROWER_MONEY = map.zq.part.R2BORROWER_MONEY2;
                         map.zqzr.global.R3BORROWER_MONEYT = utils.smalltoBIG(Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', '')));
-                        console.log("-------", map.zqzr.global.R3BORROWER_MONEY, map.zqzr.global.R3BORROWER_MONEYT);
+                        // console.log("-------", map.zqzr.global.R3BORROWER_MONEY, map.zqzr.global.R3BORROWER_MONEYT);
 
                         map.zqzr.part.R3BORROWER1 = map.zq.part.R2BORROWER;
                         map.zqzr.part.R3BORROWER_CODE = map.zq.part.R2BORROWER_CODE;
@@ -356,7 +356,9 @@ function replaceData() {
             fs.writeFileSync(fileToModify, html);
 
             //文件改好了，应该压缩成docx,然后删除目录继续下一个
-            utils.makeDocx(docPath, rows[0][posZd.user] + curDate.format("yy年MM月账单") + ".docx");
+            let tDate=new Date();
+            tDate.setMonth(tDate.getMonth()-1);
+            utils.makeDocx(docPath, rows[0][posZd.user] + tDate.format("MM月账单") + ".docx");
         });
     }
 }
@@ -387,13 +389,6 @@ function convertUserJq() {
     for (var i = 0; i < jqLines.length; i++) {
         // var fields = jqLines[i].split(',');
         var fields = jqLines[i];
-        // console.log("length:"+fields.length);
-        // if (fields.length != jqFieldLength) {
-        //     console.error("债权 第" + (i + 1) + "行数据不对");
-        //     process.exit(-1);
-        // }
-        // console.log(fields);
-        // process.exit(-1);
         //去掉多余空格
         fields.forEach(function (v, k) {
             if (v.trim) {
