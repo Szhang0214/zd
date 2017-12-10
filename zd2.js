@@ -22,7 +22,12 @@ let tpl_path = 'word_tpls';
 let tpl_tmp_path = 'output';
 let tpl_files;//模板文件数组
 
-createDirIfNonExist(tpl_tmp_path);
+let companyNames = {
+    '北京': 'bj',
+    '上海': 'sh',
+    '天下': 'tx',
+    '润川行': 'rcx',
+};
 
 //账单字段位置
 let posZd = {
@@ -61,6 +66,7 @@ let posJq = {
 // let fieldLength = Object.keys(posZd).length;//账单csv列数
 // let jqFieldLength = Object.keys(posJq).length;//债权csv列数
 
+createDirIfNonExist(tpl_tmp_path);
 
 /**
  * 年丰盈 map
@@ -180,17 +186,22 @@ function replaceData() {
         console.log("-------" + rows[0][posZd.user]);
 
         let tplFile = `${tpl_path}/`;
-        let product = rows[0][posZd.product];
+        let product = rows[0][posZd.product].trim();
+        let company = rows[0][posZd.company].trim();
+        let enCompany=companyNames[company];
+        if(enCompany==undefined){
+            error(`未知公司：${company}`);
+        }
         let needZqZr=true;//是否需要填写债权转让信息
         switch (product){
             case '年丰盈':
             case '单季丰':
             case '双季盈':
                 let n = rows.length == 1 ? 1 : 2;
-                tplFile+=`${n}.docx`;
+                tplFile+=`${n}_${enCompany}.docx`;
                 break;
             case '月润通':
-                tplFile +=`1.docx`;//只有一页
+                tplFile +=`1_${enCompany}.docx`;//只有一页
                 needZqZr=false;
                 break;
             default:

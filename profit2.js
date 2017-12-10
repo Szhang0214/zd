@@ -10,8 +10,8 @@ var jqFile = "data/既有债权列表.xlsx";
 var outFile = "账单-yyyymmdd.csv";
 var process = require('process');
 const utils = require('./utils');
-const error=utils.error;
-const print=utils.print;
+const error = utils.error;
+const print = utils.print;
 utils.extend_Date();
 
 var zdLines = utils.readXlsx(zdFile);//账单数据
@@ -37,7 +37,7 @@ var zdHeaderLine = zdHeader.join(',');
 var curDate = new Date();
 
 var zdRows = [];//账单数据
-let zdDict={};// 'lent_code'=>[info],
+let zdDict = {};// 'lent_code'=>[info],
 //账单字段位置
 var posZd = {
     user: '用户名',
@@ -48,7 +48,7 @@ var posZd = {
     lent_date: '初始出借日期',
     lent_money: '初始出借金额',
     id_code: '身份证号',
-    company:'公司',
+    company: '公司',
     report_start_date: '报告开始日期',//自动生成
     report_end_date: '报告结束日期',//自动生成
     report_date: '报告日期',//自动生成
@@ -90,6 +90,7 @@ var posJq = {
 print('poszd', posZd);
 // process.exit(-1);
 
+
 let interest = {
     '年丰盈': {
         //应还款
@@ -106,11 +107,11 @@ let interest = {
         //应还款
         // 10.8/100/12
     },
-    '单季丰':{
-        0.06:0.498,
-        0.07:0.58,
+    '单季丰': {
+        0.06: 0.498,
+        0.07: 0.58,
     },
-    '双季盈':{
+    '双季盈': {
         0.08: 0.656,
         0.09: 0.74,
         0.10: 0.82,
@@ -162,14 +163,15 @@ function check_jq_data() {
         var fields = line;
         if (fields.length != jqFieldCnt) {
             // error('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
-            fields[posJq.certificate]=fields[posJq.certificate]?fields[posJq.certificate]:'';
-            fields[posJq.identity]='企业法人';
-            fields[posJq.usage]='资金周转';
+            fields[posJq.certificate] = fields[posJq.certificate] ? fields[posJq.certificate] : '';
+            fields[posJq.identity] = '企业法人';
+            fields[posJq.usage] = '资金周转';
         }
         fields.forEach(function (v, idx) {
-            if(v.trim){
+            if (v.trim) {
                 fields[idx] = v.trim();//每个字段去掉空格
-            };
+            }
+            ;
         });
 
         // error('fields',fields);
@@ -188,11 +190,11 @@ function check_jq_data() {
     for (var code in jqDict) {
         var rows = jqDict[code];
 
-        let product=zdDict[code][posZd.product];
-        if(product==undefined){
-            error(`债权产品未知：`,zdDict);
+        let product = zdDict[code][posZd.product];
+        if (product == undefined) {
+            error(`债权产品未知：`, zdDict);
         }
-        if(product=='月润通'){
+        if (product == '月润通') {
             //月润通每月返回利润
             continue;
         }
@@ -211,8 +213,8 @@ function check_jq_data() {
         });
         newRow[posJq.borrow_money] = round(profits, 2);//本期应还款金额
         newRow[posJq.borrow_money2] = round(profits, 2);//本期应还款金额
-        newRow[posJq.identity]='企业法人';
-        newRow[posJq.usage]='资金周转';
+        newRow[posJq.identity] = '企业法人';
+        newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
     }
     //生成新的债权数据
@@ -231,13 +233,13 @@ function check_jq_data() {
 function diffMonths(curDate, lentDate) {
     return (curDate.getYear() - lentDate.getYear()) * 12 + curDate.getMonth() - lentDate.getMonth();
 }
-function addMonths(oldDate,months) {
-    var reportEndDate=new Date(oldDate);
-    let months2=months+oldDate.getMonth();
-    if(months2 >= 12){
-        reportEndDate.setMonth(months2-12);
-        reportEndDate.setYear(oldDate.getYear()+1);
-    }else {
+function addMonths(oldDate, months) {
+    var reportEndDate = new Date(oldDate);
+    let months2 = months + oldDate.getMonth();
+    if (months2 >= 12) {
+        reportEndDate.setMonth(months2 - 12);
+        reportEndDate.setYear(oldDate.getYear() + 1);
+    } else {
         reportEndDate.setMonth(months2);//报告日
     }
     return reportEndDate.format('yyyy.MM.dd');
@@ -250,25 +252,25 @@ function compute_gains() {
         //     line[k] = v.trim();
         // });
         let line = zdLines[i1];
-        zdDict[line[posZd.lent_code]]=line;
+        zdDict[line[posZd.lent_code]] = line;
 
         var lentDate = new Date(line[posZd.lent_date]);
-        var reportDate=new Date(lentDate);
+        var reportDate = new Date(lentDate);
         //计算报告日、报告开始日、报告结束日
         if (lentDate.getDate() <= 15) {
             reportDate.setDate(15);
         } else {
-            if (lentDate.getMonth()+1  == 2) {
+            if (lentDate.getMonth() + 1 == 2) {
                 reportDate.setDate(28);
             } else {
                 reportDate.setDate(30);
             }
         }
-        line[posZd.report_date] = addMonths(reportDate,1);
+        line[posZd.report_date] = addMonths(reportDate, 1);
         // 报告开始日期
         line[posZd.report_start_date] = lentDate.format('yyyy.MM.dd');
         //报告结束日期
-        line[posZd.report_end_date] =addMonths(lentDate,1);
+        line[posZd.report_end_date] = addMonths(lentDate, 1);
 
 
         compute_money(line);
@@ -296,16 +298,15 @@ function compute_gains() {
         }
 
 
-
         for (var i = 1; i < period - 1 && i < months; i++) {
             var newLine = line.slice();//生成每一期的数据
             var oldDate = new Date(newLine[posZd.report_start_date]);
             // 月数增加
-            newLine[posZd.report_start_date] = addMonths(oldDate,i);
-            newLine[posZd.report_end_date] = addMonths(oldDate,i+1);
+            newLine[posZd.report_start_date] = addMonths(oldDate, i);
+            newLine[posZd.report_end_date] = addMonths(oldDate, i + 1);
 
             var oldReportDate = new Date(newLine[posZd.report_date]);
-            newLine[posZd.report_date] = addMonths(oldReportDate,i);
+            newLine[posZd.report_date] = addMonths(oldReportDate, i);
             compute_money(newLine);
             // zdRows.push(newLine.join(','));
             zdRows.push(newLine);
@@ -327,7 +328,7 @@ function compute_money(line) {
     // for (i in interest[product]) {
     // }
     //出月润通以外每月的利息都会作为本次再次买入
-    if ( product!='月润通'  &&!(rate in interest[product])) {
+    if (product != '月润通' && !(rate in interest[product])) {
         console.error('未知利润率：' + product + rate);
         console.log(product);
         console.log(line)
@@ -340,26 +341,26 @@ function compute_money(line) {
     var lentDate = new Date(line[posZd.lent_date].trim());
     var d2 = new Date(line[posZd.report_end_date].trim());
     //计算投了多少个月了
-    var months = diffMonths(d2,lentDate);
+    var months = diffMonths(d2, lentDate);
 
     // console.log(d2.format('yyyyMMdd'),d1.format('yyyyMMdd'));
     // console.log('months='+months);
     var rate = parseFloat(line[posZd.rate]);//12%
     var profit = line[posZd.lent_money] * rate / 12 * months;
-    line[posZd.lent_money]=Number(line[posZd.lent_money]).toFixed(2);
-    line[posZd.total_money] = round(parseInt(line[posZd.lent_money]) + profit,2).toFixed(2);
+    line[posZd.lent_money] = Number(line[posZd.lent_money]).toFixed(2);
+    line[posZd.total_money] = round(parseInt(line[posZd.lent_money]) + profit, 2).toFixed(2);
 
 //报告期新的收益
     var newProfit;
-    switch (product){
+    switch (product) {
         case '年丰盈':
         case '单季丰':
         case '双季盈':
-            newProfit=compute_nfy_month_profit(line[posZd.lent_money], line[posZd.rate], irate, months);
+            newProfit = compute_nfy_month_profit(line[posZd.lent_money], line[posZd.rate], irate, months);
             break;
         case '月润通':
             // /100/12
-            newProfit=round(line[posZd.lent_money] * rate / 12).toFixed(2);
+            newProfit = round(line[posZd.lent_money] * rate / 12).toFixed(2);
             break;
         default:
             error(`未知产品类型:${product}`);
@@ -370,7 +371,7 @@ function compute_money(line) {
 function round(month_profit, number) {
     number = number || 2;
     // return Number(Number(month_profit).toFixed(number));
-    return Math.round(month_profit*100)/100;
+    return Math.round(month_profit * 100) / 100;
 }
 function compute_nfy_month_profit(lent_money, rate, irate, months) {
     var totalProfit = 0.00;
@@ -378,9 +379,9 @@ function compute_nfy_month_profit(lent_money, rate, irate, months) {
     lent_money = parseFloat(lent_money);
     var month_profit = round(lent_money * irate / 100, 2);//一个月收益
     for (var i = 0; i < months; i++) {
-        lent_money+=month_profit;
+        lent_money += month_profit;
         totalProfit = month_profit;
-        month_profit = round(lent_money  * irate / 100 );
+        month_profit = round(lent_money * irate / 100);
     }
     // Math.round(1.325*100)/100
     return round(totalProfit, 2).toFixed(2);
@@ -394,7 +395,7 @@ function write_gains_csv() {
     zdRows.unshift(zdHeader);
     var sy_file = '账单-' + d.format("yyMMdd");
     // write_csv(zdRows, sy_file);
-    utils.writeXlsx(sy_file,zdRows);
+    utils.writeXlsx(sy_file, zdRows);
     console.log("written to " + sy_file);
 
 }
@@ -405,7 +406,7 @@ function write_jq_csv(rows, headerLine) {
     rows.unshift(headerLine);
     var jq_file = '既有债权列表-' + d.format("yyMMdd") + '.xlsx';
     // write_csv(rows, jq_file);
-    utils.writeXlsx(jq_file,rows);
+    utils.writeXlsx(jq_file, rows);
     console.log("written to " + jq_file);
 
 }
