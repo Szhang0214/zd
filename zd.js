@@ -253,8 +253,13 @@ function replaceData() {
                 for (var j = 0; j < rows.length; j++) {
                     map.part.R1DATE = rows[j][posZd.report_date];
                     map.part.R1SHPAY = Number(rows[j][posZd.profit]).formatMoney();
-                    map.part.R1SRMN = Number(rows[j][posZd.profit]).formatMoney();
-                    map.part.R1HSMN = '0.00';
+                    if(product=='月润通'){
+                        map.part.R1HSMN = Number(rows[j][posZd.profit]).formatMoney();
+                        map.part.R1SRMN = '0.00';
+                    }else {
+                        map.part.R1SRMN = Number(rows[j][posZd.profit]).formatMoney();
+                        map.part.R1HSMN = '0.00';
+                    }
                     map.part.R1BGRZC = Number(rows[j][posZd.total_money]).formatMoney();
                     map.part.R1BGRSY = map.part.R1SRMN;
                     var $trClone = $replaceTr.clone();

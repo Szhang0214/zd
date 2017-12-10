@@ -165,7 +165,7 @@ function check_jq_data() {
             if (v.trim) {
                 fields[idx] = v.trim();//每个字段去掉空格
             }
-            ;
+
         });
 
         // error('fields',fields);
@@ -190,6 +190,10 @@ function check_jq_data() {
         if (product == undefined) {
             error(`债权产品未知：`, zdDict);
         }
+        rows.forEach(function (row) {
+            //还款期限-1
+            row[posJq.remain_months] = row[posJq.remain_months] - 1;
+        });
         if (product == '月润通') {
             //月润通每月返回利润
             continue;
@@ -203,8 +207,6 @@ function check_jq_data() {
         newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
         var profits = 0.00;
         rows.forEach(function (row) {
-            //还款期限-1
-            row[posJq.remain_months] = row[posJq.remain_months] - 1;
             profits += parseFloat(row[posJq.repay_money]);
         });
         newRow[posJq.borrow_money] = round(profits, 2).formatMoney();//本期应还款金额
@@ -347,7 +349,11 @@ function compute_money(line) {
     var rate = parseFloat(line[posZd.rate]);//12%
     var profit = line[posZd.lent_money] * rate / 12 * months;
     line[posZd.lent_money] = Number(line[posZd.lent_money]).toFixed(2);
-    line[posZd.total_money] = round(parseInt(line[posZd.lent_money]) + profit, 2).toFixed(2);
+    if(product=='月润通'){
+        line[posZd.total_money]=line[posZd.lent_money];
+    }else {
+        line[posZd.total_money] = round(parseInt(line[posZd.lent_money]) + profit, 2).toFixed(2);
+    }
 
 //报告期新的收益
     var newProfit;
