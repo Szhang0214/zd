@@ -1,8 +1,4 @@
-/**
- * Created by xueleixi on 2017/11/29.
- * 年丰盈自动填充数据
- *
- */
+
 var fs = require('fs');
 var iconv = require('iconv-lite');
 var zdFile = 'data/账单初始数据.xlsx';
@@ -15,18 +11,13 @@ const print = utils.print;
 utils.extend_Date();
 
 var zdLines = utils.readXlsx(zdFile);//账单数据
-//
-// console.log(zdLines.forEach(function (v) {
-//     console.log(v.join(','));
-// }));
-// process.exit(-1)
 
 /**
  * 账单
  */
 //第一行是表头
 let zdHeader = zdLines.splice(0, 1)[0];
-console.log(zdHeader);
+// console.log(zdHeader);
 var zdHeaderLine = zdHeader.join(',');
 // //删除空行
 // lines.forEach(function (line, idx) {
@@ -87,7 +78,7 @@ var posJq = {
 
 
 // console.log(zdHeader)
-print('poszd', posZd);
+// print('poszd', posZd);
 // process.exit(-1);
 
 
