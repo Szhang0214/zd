@@ -149,11 +149,14 @@ function check_jq_data() {
     var jqDict = {//以出借编号位key,每出借信息数组为value
 
     };//key:code val:[]
+    // print('jqLines',jqLines);
     jqLines.forEach(function (line, idx) {
         // var fields = line.split(',');
         var fields = line;
-        if (fields.length != jqFieldCnt) {
-            // error('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
+        if (fields.length <10) {
+            // print('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
+            return;
+        }else if(fields.length<jqFieldCnt){
             fields[posJq.certificate] = fields[posJq.certificate] ? fields[posJq.certificate] : '';
             fields[posJq.identity] = '企业法人';
             fields[posJq.usage] = '资金周转';
@@ -174,6 +177,8 @@ function check_jq_data() {
 
         jqRows.push(fields);
     });
+    // error('jqDict',jqDict,'zdDict',zdDict);
+
     //修改债权数据  todo
     // 本期还款金额	还款期限（月）	剩余还款月数
     // 475	12	8
@@ -307,6 +312,9 @@ function compute_gains() {
 }
 
 function compute_money(line) {
+    if(line[posZd.product]==undefined){
+        error('数据错误',line);
+    }
     var product = line[posZd.product].trim();
     if (!(product in interest)) {
         console.error('未知产品：' + product);
