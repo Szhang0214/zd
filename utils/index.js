@@ -207,7 +207,7 @@ function error() {
     for(let i=0;i<arguments.length;i++){
         console.error(arguments[i]);
     }
-    console.log('');
+    console.log('error');
     process.exit();
 }
 

@@ -184,15 +184,17 @@ function replaceData() {
         let needZqZr=true;//是否需要填写债权转让信息
         switch (product){
             case '年丰盈':
+            case '单季丰':
+            case '双季盈':
                 let n = rows.length == 1 ? 1 : 2;
-                tplFile+=`nfy_${n}.docx`;
+                tplFile+=`${n}.docx`;
                 break;
             case '月润通':
-                tplFile +=`yrt.docx`;
+                tplFile +=`1.docx`;//只有一页
                 needZqZr=false;
                 break;
             default:
-                error(`位置产品类型:${product}`)
+                error(`未知产品类型:${product}`)
         }
         print('模板文件：',tplFile);
 

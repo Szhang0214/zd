@@ -36,7 +36,8 @@ var zdHeaderLine = zdHeader.join(',');
 // });
 var curDate = new Date();
 
-var gRows = [];
+var zdRows = [];//账单数据
+let zdDict={};// 'lent_code'=>[info],
 //账单字段位置
 var posZd = {
     user: '用户名',
@@ -103,19 +104,22 @@ let interest = {
     },
     '月润通': {
         //应还款
-        0.08: 0.644,
-        0.09: 0.721,
-        0.10: 0.8,
-        0.11: 0.874,
-        0.12: 0.95,
-        0.13: 1.024,
-        0.14: 1.1,
-        0.15: 1.172
+        // 10.8/100/12
     },
+    '单季丰':{
+        0.06:0.498,
+        0.07:0.58,
+    },
+    '双季盈':{
+        0.08: 0.656,
+        0.09: 0.74,
+        0.10: 0.82,
+        0.11: 0.896,
+    }
 };
 
 compute_gains();
-// console.log(gRows);
+// console.log(zdRows);
 // process.exit(-1);
 
 check_jq_data();
@@ -183,7 +187,17 @@ function check_jq_data() {
     // 4.51	4	2
     for (var code in jqDict) {
         var rows = jqDict[code];
-        var newRow = [];//==最后一行
+
+        let product=zdDict[code][posZd.product];
+        if(product==undefined){
+            error(`债权产品未知：`,zdDict);
+        }
+        if(product=='月润通'){
+            //月润通每月返回利润
+            continue;
+        }
+
+        var newRow = [];//年丰盈 新增记录
         for (var j = 0; i < jqFieldCnt; j++) {
             newRow[j] = '';
         }
@@ -236,6 +250,8 @@ function compute_gains() {
         //     line[k] = v.trim();
         // });
         let line = zdLines[i1];
+        zdDict[line[posZd.lent_code]]=line;
+
         var lentDate = new Date(line[posZd.lent_date]);
         var reportDate=new Date(lentDate);
         //计算报告日、报告开始日、报告结束日
@@ -258,8 +274,8 @@ function compute_gains() {
         compute_money(line);
         //当前用户 账单需要几个月的收益信息
         var months = diffMonths(curDate, lentDate);
-        // gRows.push(line.join(','));
-        gRows.push(line);
+        // zdRows.push(line.join(','));
+        zdRows.push(line);
         //生成每个月的数据
         var period = 0;
         switch (line[posZd.product]) {
@@ -267,11 +283,16 @@ function compute_gains() {
                 period = 12;
                 break;
             case '月润通':
-                //todo
                 period = 12;
                 break;
+            case '单季丰':
+                period = 4;
+                break;
+            case '双季盈':
+                period = 6;
+                break;
             default:
-                period = 0;
+                error('产品周期-未知产品');
         }
 
 
@@ -286,15 +307,15 @@ function compute_gains() {
             var oldReportDate = new Date(newLine[posZd.report_date]);
             newLine[posZd.report_date] = addMonths(oldReportDate,i);
             compute_money(newLine);
-            // gRows.push(newLine.join(','));
-            gRows.push(newLine);
+            // zdRows.push(newLine.join(','));
+            zdRows.push(newLine);
         }
 
     }
 }
 
 function compute_money(line) {
-    var product = line[posZd.product];
+    var product = line[posZd.product].trim();
     if (!(product in interest)) {
         console.error('未知产品：' + product);
         console.log(product);
@@ -305,7 +326,8 @@ function compute_money(line) {
 
     // for (i in interest[product]) {
     // }
-    if (!(rate in interest[product])) {
+    //出月润通以外每月的利息都会作为本次再次买入
+    if ( product!='月润通'  &&!(rate in interest[product])) {
         console.error('未知利润率：' + product + rate);
         console.log(product);
         console.log(line)
@@ -328,7 +350,20 @@ function compute_money(line) {
     line[posZd.total_money] = round(parseInt(line[posZd.lent_money]) + profit,2).toFixed(2);
 
 //报告期新的收益
-    var newProfit = compute_month_profit(line[posZd.lent_money], line[posZd.rate], irate, months);
+    var newProfit;
+    switch (product){
+        case '年丰盈':
+        case '单季丰':
+        case '双季盈':
+            newProfit=compute_nfy_month_profit(line[posZd.lent_money], line[posZd.rate], irate, months);
+            break;
+        case '月润通':
+            // /100/12
+            newProfit=round(line[posZd.lent_money] * rate / 12).toFixed(2);
+            break;
+        default:
+            error(`未知产品类型:${product}`);
+    }
     line[posZd.profit] = newProfit;
 }
 //年丰盈月收益
@@ -337,7 +372,7 @@ function round(month_profit, number) {
     // return Number(Number(month_profit).toFixed(number));
     return Math.round(month_profit*100)/100;
 }
-function compute_month_profit(lent_money, rate, irate, months) {
+function compute_nfy_month_profit(lent_money, rate, irate, months) {
     var totalProfit = 0.00;
     rate = parseFloat(rate);//'12%'
     lent_money = parseFloat(lent_money);
@@ -355,11 +390,11 @@ function compute_month_profit(lent_money, rate, irate, months) {
 function write_gains_csv() {
     var write_csv = require('./utils').write_csv;
     var d = new Date();
-    // gRows.unshift(zdHeaderLine);
-    gRows.unshift(zdHeader);
+    // zdRows.unshift(zdHeaderLine);
+    zdRows.unshift(zdHeader);
     var sy_file = '账单-' + d.format("yyMMdd");
-    // write_csv(gRows, sy_file);
-    utils.writeXlsx(sy_file,gRows);
+    // write_csv(zdRows, sy_file);
+    utils.writeXlsx(sy_file,zdRows);
     console.log("written to " + sy_file);
 
 }
