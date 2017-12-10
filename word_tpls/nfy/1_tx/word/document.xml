@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
+            xmlns:mo="http://schemas.microsoft.com/office/mac/office/2008/main"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:mv="urn:schemas-microsoft-com:mac:vml" xmlns:o="urn:schemas-microsoft-com:office:office"
+            xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+            xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml"
+            xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"
+            xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+            xmlns:w10="urn:schemas-microsoft-com:office:word"
+            xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"
+            xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml"
+            xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"
+            xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
+            xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
+            xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 wp14">
+    <w:body>
+        <w:p w14:paraId="79CC4277" w14:textId="26259C6D" w:rsidR="00587113" w:rsidRDefault="00602754"
+             w:rsidP="00C41644">
+            <w:pPr>
+                <w:outlineLvl w:val="0"/>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>RUSER</w:t>
+            </w:r>
+            <w:r w:rsidR="00750624">
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">   </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>RSEX</w:t>
+            </w:r>
+            <w:r w:rsidR="00750624">
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t xml:space="preserve">  亲启</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="2C1EC9D1" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:jc w:val="center"/>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="28"/>
+                    <w:szCs w:val="28"/>
+                </w:rPr>
+                <w:t>资 金 出 借 情 况 报 告</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="343110B2" w14:textId="6290E0F3" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t>尊敬的</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r w:rsidR="00602754">
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                <w:t>RUSER</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="18"/>
+                    <w:szCs w:val="18"/>
+                    <w:u w:val="single"/>
+                </w:rPr>
+                <w:t xml:space="preserve"> </w:t>
+            </w:r>
+            <w:r w:rsidR="00602754">
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t>RSEX</w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t>，您好：</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="595A583A" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">    感谢您选择中润公司的咨询服务，参考中润公司的推荐进行资金的出借增值，您目前出借的款项所产生的收益情况如下：</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="79F7818F" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:jc w:val="right"/>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t>货币单位：人民币（元）</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:w="8522" w:type="dxa"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                </w:tblBorders>
+                <w:tblLayout w:type="fixed"/>
+                <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0"
+                           w:noVBand="1"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="2130"/>
+                <w:gridCol w:w="2130"/>
+                <w:gridCol w:w="2131"/>
+                <w:gridCol w:w="2131"/>
+            </w:tblGrid>
+            <w:tr w:rsidR="00587113" w14:paraId="2CF62E81" w14:textId="77777777">
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="4260" w:type="dxa"/>
+                        <w:gridSpan w:val="2"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="273238A5" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告周期</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="4262" w:type="dxa"/>
+                        <w:gridSpan w:val="2"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="4CB3E8C8" w14:textId="70016A77" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RRPT_BG_DATE</w:t>
+                        </w:r>
+                        <w:r w:rsidR="00750624">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>-</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RRPT_ED_DATE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="7CA18898" w14:textId="77777777">
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2130" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="7B62C946" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告日期</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2130" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="17D08E66" w14:textId="1B5E4E4C" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RRPT_DATE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2131" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="36F39E38" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告日资产总额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2131" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="3B09A8E7" w14:textId="4D726E51" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RRPD_MONEY</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="4FB08A91" w14:textId="77777777">
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2130" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5C0237E3" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>出借编号</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2130" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5C26E54A" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>资金出借及回收方式</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2131" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5B374250" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>初始出借日期</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2131" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="71F7EF9F" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>初始出借金额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="6203BE00" w14:textId="77777777" w:rsidTr="00602754">
+                <w:trPr>
+                    <w:trHeight w:val="297"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2130" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="42C0B46B" w14:textId="57E0FF60" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RLT_CODE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2130" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="75D63B3E" w14:textId="28DB0AF5" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RPODUCT</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2131" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="36ABB994" w14:textId="41961102" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RLT_BG_DATE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2131" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="74FB2693" w14:textId="59A60217" w:rsidR="00587113" w:rsidRDefault="00602754">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RLT_BG_MONEY</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="449CF5B8" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00587113">
+            <w:pPr>
+                <w:ind w:firstLineChars="200" w:firstLine="300"/>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+        </w:p>
+        <w:p w14:paraId="548B6703" w14:textId="25FA0319" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">  您目前的每笔出借款项实际回收情况及出借收益如下：      </w:t>
+            </w:r>
+            <w:r w:rsidR="00602754">
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">                               </w:t>
+            </w:r>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">  货币单位：人民币（元）</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:w="8642" w:type="dxa"/>
+                <w:jc w:val="center"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                </w:tblBorders>
+                <w:tblLayout w:type="fixed"/>
+                <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0"
+                           w:noVBand="1"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="1129"/>
+                <w:gridCol w:w="1429"/>
+                <w:gridCol w:w="1490"/>
+                <w:gridCol w:w="1290"/>
+                <w:gridCol w:w="1590"/>
+                <w:gridCol w:w="1714"/>
+            </w:tblGrid>
+            <w:tr w:rsidR="004155AE" w14:paraId="0ACA3DDC" w14:textId="77777777" w:rsidTr="004155AE">
+                <w:trPr>
+                    <w:trHeight w:val="664"/>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1129" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="02FBCFC3" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告日</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1429" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="115E0E03" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告期内借款人应还款金额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1490" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="604C35F9" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告日内您选择受让的债权金额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1290" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="66BF7ABB" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告日您选择收回的金额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1590" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5AD439A4" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告日资产总额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1714" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="1AB41D06" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>报告期内实际收益</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="0B4FF118" w14:textId="77777777" w:rsidTr="004155AE">
+                <w:trPr>
+                    <w:trHeight w:val="286"/>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="8642" w:type="dxa"/>
+                        <w:gridSpan w:val="6"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="0BB3C9C3" w14:textId="5E9951C0" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>出借编号：</w:t>
+                        </w:r>
+                        <w:r w:rsidR="00602754">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>RLT_CODE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="004155AE" w14:paraId="3347F148" w14:textId="77777777" w:rsidTr="004155AE">
+                <w:trPr>
+                    <w:trHeight w:val="241"/>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1129" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="14E0E27D" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R1DATE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1429" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="125D94CD" w14:textId="1527ADD3" w:rsidR="00587113" w:rsidRDefault="00341C0D">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R1SHPAY</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1490" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="2B224993" w14:textId="097AC41D" w:rsidR="00587113" w:rsidRDefault="00341C0D">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R1SRMN</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1290" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5D6D62B8" w14:textId="4A701A0E" w:rsidR="00587113" w:rsidRDefault="00341C0D">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R1HSMN</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1590" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="48711046" w14:textId="4483F577" w:rsidR="00587113" w:rsidRDefault="00341C0D">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R1BGRZC</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1714" w:type="dxa"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="348A28B2" w14:textId="06608C11" w:rsidR="00587113" w:rsidRDefault="00341C0D">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R1BGRSY</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:p w14:paraId="06EBA667" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">    感谢您选购中润公司理财产品，中润公司竭诚为您提供最优质高效的服务，有任何问题联系我们为您专门指定的客服经理。</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="195B8042" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">    客服热线：4008-158-055                  北京中润天下企业管理中心</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="66541859" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">                                            盖章：                </w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="43370D43" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">                                            日期：               </w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="320491A4" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:jc w:val="center"/>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t>既 有 债 权 列 表</w:t>
+            </w:r>
+        </w:p>
+        <w:p w14:paraId="7454134C" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+            <w:pPr>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+            </w:pPr>
+            <w:r>
+                <w:rPr>
+                    <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                    <w:sz w:val="15"/>
+                    <w:szCs w:val="15"/>
+                </w:rPr>
+                <w:t xml:space="preserve">    通过中润公司信用评估与筛选，推荐您通过受让他人既有的个人间借贷合同的方式，目前已经出借资金给如下借款人，详见《既有债权列表》。</w:t>
+            </w:r>
+        </w:p>
+        <w:tbl>
+            <w:tblPr>
+                <w:tblW w:w="9854" w:type="dxa"/>
+                <w:jc w:val="center"/>
+                <w:tblBorders>
+                    <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                    <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+                </w:tblBorders>
+                <w:tblLayout w:type="fixed"/>
+                <w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0"
+                           w:noVBand="1"/>
+            </w:tblPr>
+            <w:tblGrid>
+                <w:gridCol w:w="421"/>
+                <w:gridCol w:w="850"/>
+                <w:gridCol w:w="1568"/>
+                <w:gridCol w:w="1165"/>
+                <w:gridCol w:w="1480"/>
+                <w:gridCol w:w="972"/>
+                <w:gridCol w:w="918"/>
+                <w:gridCol w:w="700"/>
+                <w:gridCol w:w="690"/>
+                <w:gridCol w:w="1090"/>
+            </w:tblGrid>
+            <w:tr w:rsidR="00587113" w14:paraId="6157744C" w14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="377"/>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="5484" w:type="dxa"/>
+                        <w:gridSpan w:val="5"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="587538D4" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>债权基本信息</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="4370" w:type="dxa"/>
+                        <w:gridSpan w:val="5"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="2411FE59" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>借款人如约还款情况下债权收益信息</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="38791AA6" w14:textId="77777777">
+                <w:trPr>
+                    <w:trHeight w:val="606"/>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="421" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="73156AE3" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>序号</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="850" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="17B27A28" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>借款人</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1568" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="35051564" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>借款人证件号</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1165" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="1F127466" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>初始受让债权价值</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1480" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="22082315" w14:textId="464AD97C" w:rsidR="00587113" w:rsidRDefault="00C41644"
+                         w:rsidP="00C41644">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>yyyy</w:t>
+                        </w:r>
+                        <w:r w:rsidR="00750624">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>年</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>mm</w:t>
+                        </w:r>
+                        <w:r w:rsidR="00750624">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>月</w:t>
+                        </w:r>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>dd</w:t>
+                        </w:r>
+                        <w:r w:rsidR="00750624">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>日持有债权价值（元）</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="972" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="2D368EAF" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>还款起始日期</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="918" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="210C8FF1" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>本期还款金额</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="700" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="79FAC526" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>还款期限（月）</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="690" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="246A3047" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>剩余还款月数</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1090" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="18CAD5CF" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>预计债权收益率（年）</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="13D2F17B" w14:textId="77777777">
+                <w:trPr>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="421" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="190031D7" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>SN</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="850" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="3784CF49" w14:textId="442C3D03" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:textAlignment w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2BORROWER</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1568" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="7D10F69D" w14:textId="74FA1C41" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:textAlignment w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2BORROWER_CODE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1165" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="0ED1CFBD" w14:textId="07B5968C" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:textAlignment w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2BORROWER_MONEY1</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1480" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="221B2BF3" w14:textId="5C5D2DD5" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2BORROWER_MONEY2</w:t>
+                        </w:r>
+                        <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+                        <w:bookmarkEnd w:id="0"/>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="972" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="0771DC27" w14:textId="0CDE1190" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2BORROWER_RPD</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="918" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="36177399" w14:textId="1762E7D8" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2BORROWER_RPM</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="700" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="3CBA8D99" w14:textId="7DB4E05E" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2_MTH</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="690" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5BD6F854" w14:textId="29C4A439" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2_REM</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1090" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="61018EDF" w14:textId="5B7EF79E" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2_RATE</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+            <w:tr w:rsidR="00587113" w14:paraId="6C6F5B51" w14:textId="77777777">
+                <w:trPr>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="2839" w:type="dxa"/>
+                        <w:gridSpan w:val="3"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="41510DA8" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>合计</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1165" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5D85BB4C" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00587113">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1480" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="6E6F4792" w14:textId="46CE220A" w:rsidR="00587113" w:rsidRDefault="00943D66">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00943D66">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2_SUM1</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="972" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="3E199AA2" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00587113">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="918" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="774E1695" w14:textId="4F21E080" w:rsidR="00587113" w:rsidRDefault="00943D66">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="00943D66">
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>R2_SUM2</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="700" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="09C55B40" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00587113">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="690" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="734A694F" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00587113">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1090" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="08B6EB59" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00587113">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="宋体" w:hAnsi="宋体" w:cs="宋体"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                    </w:p>
+                </w:tc>
+            </w:tr>
+        </w:tbl>
+        <w:sectPr w:rsidR="00587113">
+            <w:headerReference w:type="default" r:id="rId7"/>
+            <w:footerReference w:type="default" r:id="rId8"/>
+            <w:pgSz w:w="11906" w:h="16838"/>
+            <w:pgMar w:top="1440" w:right="1797" w:bottom="1440" w:left="1797" w:header="851" w:footer="992"
+                     w:gutter="0"/>
+            <w:cols w:space="425"/>
+            <w:docGrid w:type="lines" w:linePitch="312"/>
+        </w:sectPr>
+    </w:body>
+</w:document>
