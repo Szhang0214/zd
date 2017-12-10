@@ -16,7 +16,7 @@
                     <w:sz w:val="28"/>
                     <w:szCs w:val="28"/>
                 </w:rPr>
-                <w:t>&#x8D39;&#x7115;&#x7FD4;</w:t>
+                <w:t>&#x5218;&#x6587;</w:t>
             </w:r>
             <w:r w:rsidR="00750624">
                 <w:rPr>
@@ -93,7 +93,7 @@
                     <w:szCs w:val="15"/>
                     <w:u w:val="single"/>
                 </w:rPr>
-                <w:t>&#x8D39;&#x7115;&#x7FD4;</w:t>
+                <w:t>&#x5218;&#x6587;</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
@@ -221,7 +221,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>2017.11.07</w:t>
+                            <w:t>2017.11.10</w:t>
                         </w:r>
                         <w:r w:rsidR="00750624">
                             <w:rPr>
@@ -237,7 +237,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>2017.12.07</w:t>
+                            <w:t>2017.12.10</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -331,7 +331,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>52,125.00</w:t>
+                            <w:t>50,250.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -453,7 +453,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>0010674</w:t>
+                            <w:t>0010677</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -476,7 +476,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>&#x6708;&#x6DA6;&#x901A;</w:t>
+                            <w:t>&#x5355;&#x5B63;&#x4E30;</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -499,7 +499,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>2017.07.07</w:t>
+                            <w:t>2017.11.10</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -770,585 +770,13 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>0010674</w:t>
+                            <w:t>0010677</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
             </w:tr>
             
         <w:tr w:rsidR="004155AE" w14:paraId="3347F148" w14:textId="77777777" w:rsidTr="004155AE">
-                <w:trPr>
-                    <w:trHeight w:val="241"/>
-                    <w:jc w:val="center"/>
-                </w:trPr>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1129" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="14E0E27D" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>2017.08.15</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1429" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="125D94CD" w14:textId="1527ADD3" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1490" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="2B224993" w14:textId="097AC41D" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1290" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="5D6D62B8" w14:textId="4A701A0E" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>0.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1590" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="48711046" w14:textId="4483F577" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>50,425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1714" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="348A28B2" w14:textId="06608C11" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-            </w:tr><w:tr w:rsidR="004155AE" w14:paraId="3347F148" w14:textId="77777777" w:rsidTr="004155AE">
-                <w:trPr>
-                    <w:trHeight w:val="241"/>
-                    <w:jc w:val="center"/>
-                </w:trPr>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1129" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="14E0E27D" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>2017.09.15</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1429" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="125D94CD" w14:textId="1527ADD3" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1490" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="2B224993" w14:textId="097AC41D" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1290" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="5D6D62B8" w14:textId="4A701A0E" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>0.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1590" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="48711046" w14:textId="4483F577" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>50,850.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1714" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="348A28B2" w14:textId="06608C11" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-            </w:tr><w:tr w:rsidR="004155AE" w14:paraId="3347F148" w14:textId="77777777" w:rsidTr="004155AE">
-                <w:trPr>
-                    <w:trHeight w:val="241"/>
-                    <w:jc w:val="center"/>
-                </w:trPr>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1129" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="14E0E27D" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>2017.10.15</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1429" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="125D94CD" w14:textId="1527ADD3" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1490" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="2B224993" w14:textId="097AC41D" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1290" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="5D6D62B8" w14:textId="4A701A0E" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>0.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1590" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="48711046" w14:textId="4483F577" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>51,275.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1714" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="348A28B2" w14:textId="06608C11" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-            </w:tr><w:tr w:rsidR="004155AE" w14:paraId="3347F148" w14:textId="77777777" w:rsidTr="004155AE">
-                <w:trPr>
-                    <w:trHeight w:val="241"/>
-                    <w:jc w:val="center"/>
-                </w:trPr>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1129" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="14E0E27D" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>2017.11.15</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1429" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="125D94CD" w14:textId="1527ADD3" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1490" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="2B224993" w14:textId="097AC41D" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1290" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="5D6D62B8" w14:textId="4A701A0E" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>0.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1590" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="48711046" w14:textId="4483F577" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>51,700.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-                <w:tc>
-                    <w:tcPr>
-                        <w:tcW w:w="1714" w:type="dxa"/>
-                    </w:tcPr>
-                    <w:p w14:paraId="348A28B2" w14:textId="06608C11" w:rsidR="00587113" w:rsidRDefault="00341C0D">
-                        <w:pPr>
-                            <w:jc w:val="center"/>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                        </w:pPr>
-                        <w:r>
-                            <w:rPr>
-                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
-                                <w:sz w:val="15"/>
-                                <w:szCs w:val="15"/>
-                            </w:rPr>
-                            <w:t>425.00</w:t>
-                        </w:r>
-                    </w:p>
-                </w:tc>
-            </w:tr><w:tr w:rsidR="004155AE" w14:paraId="3347F148" w14:textId="77777777" w:rsidTr="004155AE">
                 <w:trPr>
                     <w:trHeight w:val="241"/>
                     <w:jc w:val="center"/>
@@ -1395,7 +823,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>425.00</w:t>
+                            <w:t>249.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -1418,7 +846,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>425.00</w:t>
+                            <w:t>249.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -1464,7 +892,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>52,125.00</w:t>
+                            <w:t>50,250.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -1487,7 +915,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>425.00</w:t>
+                            <w:t>249.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2016,7 +1444,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>&#x5317;&#x4EAC;&#x661F;&#x534E;&#x667A;&#x672C;&#x6295;&#x8D44;&#x6709;&#x9650;&#x516C;&#x53F8;</w:t>
+                            <w:t>&#x4E0A;&#x6D77;&#x6606;&#x5947;&#x7389;&#x6893;&#x827A;&#x672F;&#x54C1;&#x6709;&#x9650;&#x516C;&#x53F8;</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2042,7 +1470,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>91110111582590935F</w:t>
+                            <w:t>91310104MA1FR9M8XN</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2118,7 +1546,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>2017/09/27</w:t>
+                            <w:t>2017/09/06</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2142,7 +1570,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>425.00</w:t>
+                            <w:t>249.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2167,7 +1595,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>12</w:t>
+                            <w:t>24</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2192,7 +1620,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>10</w:t>
+                            <w:t>21</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2216,7 +1644,262 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>NaN%</w:t>
+                            <w:t>6.00%</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+            </w:tr><w:tr w:rsidR="00587113" w14:paraId="13D2F17B" w14:textId="77777777">
+                <w:trPr>
+                    <w:jc w:val="center"/>
+                </w:trPr>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="421" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="190031D7" w14:textId="77777777" w:rsidR="00587113" w:rsidRDefault="00750624">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;" w:hint="eastAsia"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>1</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="850" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="3784CF49" w14:textId="442C3D03" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:textAlignment w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>undefined</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1568" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="7D10F69D" w14:textId="74FA1C41" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:textAlignment w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>undefined</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1165" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="0ED1CFBD" w14:textId="320F1927" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:textAlignment w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>249.00</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1480" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="221B2BF3" w14:textId="0844A9F0" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>249.00</w:t>
+                        </w:r>
+                        <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+                        <w:bookmarkEnd w:id="0"/>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="972" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="0771DC27" w14:textId="0CDE1190" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>undefined</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="918" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="36177399" w14:textId="1762E7D8" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>undefined</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="700" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="3CBA8D99" w14:textId="7DB4E05E" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>undefined</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="690" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="5BD6F854" w14:textId="29C4A439" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:widowControl/>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>undefined</w:t>
+                        </w:r>
+                    </w:p>
+                </w:tc>
+                <w:tc>
+                    <w:tcPr>
+                        <w:tcW w:w="1090" w:type="dxa"/>
+                        <w:vAlign w:val="center"/>
+                    </w:tcPr>
+                    <w:p w14:paraId="61018EDF" w14:textId="5B7EF79E" w:rsidR="00587113" w:rsidRDefault="003830B1">
+                        <w:pPr>
+                            <w:jc w:val="center"/>
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                        </w:pPr>
+                        <w:r w:rsidRPr="003830B1">
+                            <w:rPr>
+                                <w:rFonts w:ascii="&#x5B8B;&#x4F53;" w:hAnsi="&#x5B8B;&#x4F53;" w:cs="&#x5B8B;&#x4F53;"/>
+                                <w:sz w:val="15"/>
+                                <w:szCs w:val="15"/>
+                            </w:rPr>
+                            <w:t>6.00%</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2285,7 +1968,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>50,000.00</w:t>
+                            <w:t>50,249.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>
@@ -2325,7 +2008,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>425.00</w:t>
+                            <w:t>0.00</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>

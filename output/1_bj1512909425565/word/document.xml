@@ -2645,7 +2645,7 @@
                                 <w:sz w:val="15"/>
                                 <w:szCs w:val="15"/>
                             </w:rPr>
-                            <w:t>NaN%</w:t>
+                            <w:t>10.20%</w:t>
                         </w:r>
                     </w:p>
                 </w:tc>

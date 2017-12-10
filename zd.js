@@ -287,13 +287,25 @@ function replaceData() {
                 for (let j = 0; j < jqRows.length; j++) {
                     map.zq.part.R2BORROWER = jqRows[j][posJq.borrower];
                     map.zq.part.R2BORROWER_CODE = jqRows[j][posJq.id_code];
-                    map.zq.part.R2BORROWER_MONEY1 = jqRows[j][posJq.borrow_money];
+                    let pMoney = jqRows[j][posJq.borrow_money];
+                    // print('pMoney',pMoney,typeof pMoney);
+                    // if(typeof Number(pMoney) =='number'){
+                    //     pMoney=Number(pMoney).formatMoney();
+                    // }
+                    // print('pMoney2',pMoney)
+                    map.zq.part.R2BORROWER_MONEY1 = pMoney;
                     map.zq.part.R2BORROWER_MONEY2 = map.zq.part.R2BORROWER_MONEY1;
                     map.zq.part.R2BORROWER_RPD = jqRows[j][posJq.repay_day];
                     map.zq.part.R2BORROWER_RPM = jqRows[j][posJq.repay_money];
                     map.zq.part.R2_MTH = jqRows[j][posJq.repay_months];
                     map.zq.part.R2_REM = jqRows[j][posJq.remain_months];
-                    map.zq.part.R2_RATE = Number(jqRows[j][posJq.rate] * 100).toFixed(2) + '%';
+                    // error('rate',jqRows[j][posJq.rate],jqRows[j]);
+                    let pRate = jqRows[j][posJq.rate];
+                    if(typeof pRate=="string"){
+                        pRate=pRate.replace('%','')/100;
+                    }
+                    map.zq.part.R2_RATE = Number(pRate * 100).toFixed(2) + '%';
+                    print('rate',map.zq.part.R2_RATE);
                     // console.log("-----" + map.zq.part.R2BORROWER_MONEY2 + ';' + map.zq.part.R2BORROWER_RPM);
                     R2_SUM1 += Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', ''));
 

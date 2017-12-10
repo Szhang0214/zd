@@ -200,15 +200,15 @@ function check_jq_data() {
             newRow[j] = '';
         }
         newRow[posJq.lent_code] = rows[0][posJq.lent_code];
-        newRow[posJq.rate] = rows[0][posJq.rate];
+        newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
         var profits = 0.00;
         rows.forEach(function (row) {
             //还款期限-1
             row[posJq.remain_months] = row[posJq.remain_months] - 1;
             profits += parseFloat(row[posJq.repay_money]);
         });
-        newRow[posJq.borrow_money] = round(profits, 2);//本期应还款金额
-        newRow[posJq.borrow_money2] = round(profits, 2);//本期应还款金额
+        newRow[posJq.borrow_money] = round(profits, 2).formatMoney();//本期应还款金额
+        newRow[posJq.borrow_money2] = round(profits, 2).formatMoney();//本期应还款金额
         newRow[posJq.identity] = '企业法人';
         newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
@@ -367,10 +367,9 @@ function compute_money(line) {
     line[posZd.profit] = newProfit;
 }
 //年丰盈月收益
-function round(month_profit, number) {
-    number = number || 2;
+function round(num, digits) {
     // return Number(Number(month_profit).toFixed(number));
-    return Math.round(month_profit * 100) / 100;
+    return Math.round(num * 100) / 100;
 }
 function compute_nfy_month_profit(lent_money, rate, irate, months) {
     var totalProfit = 0.00;
