@@ -18,91 +18,84 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="账单原始数据.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/账单原始数据.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zd_2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zd_2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-              <folding>
-                <element signature="n#!!block;n#convertUserBills#0;n#!!block;n#makeDocxs#0" expanded="false" />
-                <element signature="n#!!block;n#convertUserZq#0;n#!!block;n#makeDocxs#0" expanded="false" />
-                <marker date="1512480402000" expanded="false" signature="1846:2224" ph="{...}" />
-                <marker date="1512480402000" expanded="false" signature="2638:4612" ph="{...}" />
-                <marker date="1512480402000" expanded="false" signature="5590:6953" ph="{...}" />
-                <marker date="1512480402000" expanded="false" signature="7334:8136" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="既有债权列表.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zs/既有债权列表.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="账单原始数据.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zs/账单原始数据.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="xlsx.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="xlsx.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/xlsx.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="402">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding>
-                <marker date="1512538916000" expanded="false" signature="0:44" ph="/** Created by xueleixi on 2017/12/5. ...*/" />
+                <element signature="e#0#44#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profit.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/profit.js">
+      <file leaf-file-name="zd2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zd2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="195" column="40" lean-forward="false" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
+            <state relative-caret-position="324">
+              <caret line="131" column="2" lean-forward="true" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
+              <folding>
+                <element signature="e#1759#3485#0" expanded="false" />
+                <element signature="e#1806#2249#0" expanded="false" />
+                <element signature="e#2261#2424#0" expanded="false" />
+                <element signature="e#5356#6786#0" expanded="false" />
+                <element signature="e#6894#7984#0" expanded="false" />
+                <element signature="n#!!block;n#convertUserBills#0" expanded="false" />
+                <element signature="n#!!block;n#convertUserJq#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="document.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/word_tpls/nfy/word/document.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="3848" column="37" lean-forward="false" selection-start-line="3848" selection-start-column="21" selection-end-line="3848" selection-end-column="37" />
+              <folding>
+                <element signature="n#w:tr#1;n#w:tbl#2;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+                <element signature="n#w:tc#0;n#w:tr#1;n#w:tbl#2;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+                <element signature="n#w:tr#1;n#w:tbl#3;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+                <element signature="n#w:tc#1;n#w:tr#1;n#w:tbl#3;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profit2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/profit2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="231" column="12" lean-forward="false" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="12" />
+              <folding>
+                <element signature="e#835#1190#0" expanded="false" />
+                <element signature="e#1213#1642#0" expanded="false" />
+                <element signature="n#!!block;n#check_jq_data#0" expanded="false" />
+                <element signature="n#!!block;n#addMonths#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/word_tpls/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="既有债权列表-171205.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/既有债权列表-171205.csv">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="账单-171205.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/账单-171205.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="153">
+              <caret line="275" column="10" lean-forward="true" selection-start-line="275" selection-start-column="10" selection-end-line="275" selection-end-column="10" />
+              <folding>
+                <element signature="n#!!block;n#smalltoBIG#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,43 +111,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>资产</find>
-      <find>回收金额</find>
-      <find>fieldLength</find>
-      <find>pos_shouhui</find>
-      <find>R用户</find>
-      <find>R性别</find>
-      <find>R报告开始日期</find>
-      <find>R报告结束日期</find>
-      <find>R报告日</find>
-      <find>R出借编号</find>
-      <find>R产品类型</find>
-      <find>R初始出借日期</find>
-      <find>R报告日资产</find>
-      <find>RRPT_DATE资产</find>
-      <find>R1应还款金额</find>
-      <find>R1受让金额</find>
-      <find>R1回收金额</find>
-      <find>R1报告日资产</find>
-      <find>R1报告日收益</find>
-      <find>console</find>
-      <find>R初始出借金额</find>
-      <find>pos_</find>
-      <find>map.part</find>
-      <find>readcsv</find>
-      <find>contents</find>
-      <find>,</find>
-      <find>0008109</find>
-      <find>userBills</find>
-      <find>未知利润率</find>
-      <find>%</find>
+      <find>split</find>
+      <find>zqrows</find>
+      <find>zqRows</find>
+      <find>tplFile</find>
+      <find>interest</find>
+      <find>interes</find>
+      <find>compute_month</find>
+      <find>total_money</find>
+      <find>R2_SUM</find>
+      <find>R2BORROWER_MONEY</find>
+      <find>1</find>
+      <find>序号</find>
+      <find>R2_SUM1</find>
+      <find>RegExp</find>
+      <find>RIDCODE</find>
+      <find>R3B</find>
+      <find>R3BORROWER</find>
+      <find>R3BORROWER_RPM</find>
+      <find>R2_MTH</find>
+      <find>unzipFile</find>
+      <find>format</find>
+      <find>readCsvToLines</find>
+      <find>unzipf</find>
+      <find>R3BORROWER_MONEY</find>
+      <find>lent_money</find>
+      <find>账单</find>
+      <find>r</find>
+      <find>getDocxTmpDir</find>
+      <find>finished</find>
+      <find>var</find>
     </findStrings>
     <replaceStrings>
-      <replace>11</replace>
-      <replace>R受让金额</replace>
-      <replace>R1报告日日期</replace>
-      <replace>R1报告日期</replace>
-      <replace>R1DATE</replace>
       <replace>R用户</replace>
       <replace>R</replace>
       <replace>R性别</replace>
@@ -180,13 +168,16 @@
       <replace>posZd.</replace>
       <replace>userZq</replace>
       <replace>0009187</replace>
+      <replace>reportBeginDate</replace>
+      <replace>R3BORROWER1</replace>
+      <replace>jqRows</replace>
+      <replace>let</replace>
+      <replace>oldDate</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/6月份账单.html" />
-        <option value="$PROJECT_DIR$/zd.html" />
         <option value="$PROJECT_DIR$/file1.txt" />
         <option value="$PROJECT_DIR$/file2.txt" />
         <option value="$PROJECT_DIR$/zip.js" />
@@ -204,7 +195,6 @@
         <option value="$PROJECT_DIR$/bills.csv" />
         <option value="$PROJECT_DIR$/收益-1512110602881.csv" />
         <option value="$PROJECT_DIR$/read_sy.js" />
-        <option value="$PROJECT_DIR$/word_tpls/nfy/word/document.xml" />
         <option value="$PROJECT_DIR$/word_tpls/word/document.xml" />
         <option value="$PROJECT_DIR$/word_tpls/doc2/word/document.xml" />
         <option value="$PROJECT_DIR$/t/word/document.xml" />
@@ -212,7 +202,6 @@
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/modify_doc.js" />
         <option value="$PROJECT_DIR$/unzip/word/document.xml" />
-        <option value="$PROJECT_DIR$/utils/index.js" />
         <option value="$PROJECT_DIR$/t.js" />
         <option value="$PROJECT_DIR$/make_zd.js" />
         <option value="$PROJECT_DIR$/conf/index.js" />
@@ -232,9 +221,14 @@
         <option value="$PROJECT_DIR$/账单.csv" />
         <option value="$PROJECT_DIR$/zs/既有债权列表.csv" />
         <option value="$PROJECT_DIR$/zs/账单原始数据.csv" />
-        <option value="$PROJECT_DIR$/zd_2.js" />
         <option value="$PROJECT_DIR$/profit.js" />
         <option value="$PROJECT_DIR$/utils/xlsx.js" />
+        <option value="$PROJECT_DIR$/zd_2.js" />
+        <option value="$PROJECT_DIR$/word_tpls/nfy/word/document.xml" />
+        <option value="$PROJECT_DIR$/utils/index.js" />
+        <option value="$PROJECT_DIR$/zd2.js" />
+        <option value="$PROJECT_DIR$/profit2.js" />
+        <option value="$PROJECT_DIR$/word_tpls/.gitignore" />
       </list>
     </option>
   </component>
@@ -244,12 +238,17 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1228" />
+    <option name="width" value="1920" />
     <option name="height" value="977" />
   </component>
   <component name="ProjectView">
@@ -267,6 +266,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -290,7 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="word_tpls" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -304,13 +304,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
+              <option name="myItemId" value="data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -323,18 +322,19 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$/output/2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/word_tpls/nfy" />
-      <recent name="$PROJECT_DIR$/nfy_2" />
-      <recent name="$PROJECT_DIR$/utils" />
-      <recent name="$PROJECT_DIR$/word_tpls/" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/word_tpls" />
+      <recent name="$PROJECT_DIR$/word_tpls/nfy/1" />
       <recent name="$PROJECT_DIR$/word_tpls/nfy" />
       <recent name="$PROJECT_DIR$/output" />
-      <recent name="$PROJECT_DIR$/word_tpls" />
       <recent name="$PROJECT_DIR$/zip" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/word_tpls/nfy" />
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/word_tpls" />
+      <recent name="$PROJECT_DIR$/word_tpls/yrt" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -421,25 +421,25 @@
       <workItem from="1512363088504" duration="23000" />
       <workItem from="1512366782052" duration="7000" />
       <workItem from="1512390393273" duration="9101000" />
-      <workItem from="1512442567389" duration="28166000" />
+      <workItem from="1512442567389" duration="28971000" />
+      <workItem from="1512736459112" duration="33166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98671000" />
+    <option name="totallyTimeSpent" value="132642000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1228" height="977" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1920" height="977" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.254886" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40638766" sideWeight="0.5027586" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46585903" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40599456" sideWeight="0.5027586" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21840659" sideWeight="0.49724138" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31387666" sideWeight="0.49724138" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30947137" sideWeight="0.49724138" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -448,6 +448,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46585903" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -478,16 +479,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/archiver.js" />
-    <entry file="file://$PROJECT_DIR$/unizp.js" />
-    <entry file="file://$PROJECT_DIR$/unzip/output/151203961059/word/settings.xml" />
-    <entry file="file://$PROJECT_DIR$/rd.js" />
-    <entry file="file://$PROJECT_DIR$/unzip/unzip.js" />
     <entry file="file://$PROJECT_DIR$/1.csv" />
     <entry file="file://$PROJECT_DIR$/收益-1512101979269.csv" />
     <entry file="file://$PROJECT_DIR$/收益-1512102474938.csv" />
@@ -511,7 +507,6 @@
     <entry file="file://$PROJECT_DIR$/收益-1512111746249.csv" />
     <entry file="file://$PROJECT_DIR$/收益-1512110602881.csv" />
     <entry file="file://$PROJECT_DIR$/word_tpls/word/document.xml" />
-    <entry file="file://$PROJECT_DIR$/word_tpls/nfy/word/document.xml" />
     <entry file="file://$PROJECT_DIR$/word_tpls/doc2/word/document.xml" />
     <entry file="file://$PROJECT_DIR$/t/word/document.xml" />
     <entry file="file://$PROJECT_DIR$/收益-1512102847391.csv" />
@@ -531,28 +526,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/收益.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bills.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="102" lean-forward="false" selection-start-line="1" selection-start-column="102" selection-end-line="1" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/收益.csv" />
+    <entry file="file://$PROJECT_DIR$/bills.csv" />
+    <entry file="file://$PROJECT_DIR$/t.js" />
     <entry file="file://$PROJECT_DIR$/conf/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -561,37 +537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/收益.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/收益-171205.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jsdom/lib/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5517">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/收益.csv" />
+    <entry file="file://$PROJECT_DIR$/收益-171205.csv" />
+    <entry file="file://$PROJECT_DIR$/zip.js" />
+    <entry file="file://$PROJECT_DIR$/node_modules/jsdom/lib/api.js" />
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -616,38 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modify_doc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zd.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="144" column="10" lean-forward="true" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="119" column="18" lean-forward="false" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -661,23 +578,6 @@
           <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="15" />
           <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="15" />
           <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/既有债权列表.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,22 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zd_2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!block;n#convertUserBills#0;n#!!block;n#makeDocxs#0" expanded="false" />
-            <element signature="n#!!block;n#convertUserZq#0;n#!!block;n#makeDocxs#0" expanded="false" />
-            <marker date="1512480402000" expanded="false" signature="1846:2224" ph="{...}" />
-            <marker date="1512480402000" expanded="false" signature="2638:4612" ph="{...}" />
-            <marker date="1512480402000" expanded="false" signature="5590:6953" ph="{...}" />
-            <marker date="1512480402000" expanded="false" signature="7334:8136" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -720,14 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zs/既有债权列表.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/账单-171205.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -736,29 +612,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profit.js">
+    <entry file="file://$PROJECT_DIR$/既有债权列表-171205.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="195" column="40" lean-forward="false" selection-start-line="195" selection-start-column="40" selection-end-line="195" selection-end-column="40" />
+        <state relative-caret-position="204">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/既有债权列表-171205.csv">
+    <entry file="file://$PROJECT_DIR$/modify_doc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="119">
+          <caret line="144" column="16" lean-forward="false" selection-start-line="144" selection-start-column="16" selection-end-line="144" selection-end-column="16" />
+          <folding>
+            <element signature="n#!!block;n#modify_doc#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="679">
+          <caret line="144" column="10" lean-forward="false" selection-start-line="144" selection-start-column="10" selection-end-line="144" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/既有债权列表.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="74" column="10" lean-forward="false" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/既有债权列表-171209.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/账单-171209.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="16" column="60" lean-forward="true" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zs/既有债权列表.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zd_2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="300" column="17" lean-forward="true" selection-start-line="300" selection-start-column="17" selection-end-line="300" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/xlsx.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        <state relative-caret-position="402">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1512538916000" expanded="false" signature="0:44" ph="/** Created by xueleixi on 2017/12/5. ...*/" />
+            <element signature="e#0#44#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word_tpls/nfy/word/document.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="3848" column="37" lean-forward="false" selection-start-line="3848" selection-start-column="21" selection-end-line="3848" selection-end-column="37" />
+          <folding>
+            <element signature="n#w:tr#1;n#w:tbl#2;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+            <element signature="n#w:tc#0;n#w:tr#1;n#w:tbl#2;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+            <element signature="n#w:tr#1;n#w:tbl#3;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+            <element signature="n#w:tc#1;n#w:tr#1;n#w:tbl#3;n#w:body#0;n#w:document#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="275" column="10" lean-forward="true" selection-start-line="275" selection-start-column="10" selection-end-line="275" selection-end-column="10" />
+          <folding>
+            <element signature="n#!!block;n#smalltoBIG#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zd2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="131" column="2" lean-forward="true" selection-start-line="131" selection-start-column="2" selection-end-line="131" selection-end-column="2" />
+          <folding>
+            <element signature="e#1759#3485#0" expanded="false" />
+            <element signature="e#1806#2249#0" expanded="false" />
+            <element signature="e#2261#2424#0" expanded="false" />
+            <element signature="e#5356#6786#0" expanded="false" />
+            <element signature="e#6894#7984#0" expanded="false" />
+            <element signature="n#!!block;n#convertUserBills#0" expanded="false" />
+            <element signature="n#!!block;n#convertUserJq#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profit2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="231" column="12" lean-forward="false" selection-start-line="231" selection-start-column="9" selection-end-line="231" selection-end-column="12" />
+          <folding>
+            <element signature="e#835#1190#0" expanded="false" />
+            <element signature="e#1213#1642#0" expanded="false" />
+            <element signature="n#!!block;n#check_jq_data#0" expanded="false" />
+            <element signature="n#!!block;n#addMonths#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word_tpls/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
