@@ -179,7 +179,7 @@ function writeXlsx(filename,data) {
     if(filename.indexOf('.xlsx')==-1){
         filename+='.xlsx';
     }
-    fs.writeFileSync(filename,buffer);
+    fs.writeFileSync('生成的excel'+path.sep+filename,buffer);
 }
 
 

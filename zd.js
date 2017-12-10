@@ -4,7 +4,6 @@ const utils = require('./utils');
 
 const unzip = require('unzip');
 const process = require('process');
-const modify_doc = require('./modify_doc').modify_doc;
 const rd = require('rd');
 const iconv = require('iconv-lite');
 const error = utils.error;
@@ -16,8 +15,8 @@ const replacePlaceHolders=utils.replacePlaceHolders;
 
 let curDate = new Date();
 //年丰盈五个月报告
-let sy_file = '账单-' + curDate.format("yyMMdd") + '.xlsx';
-let zq_file = '既有债权列表-' + curDate.format("yyMMdd") + '.xlsx';
+let sy_file = '生成的excel'+path.sep+'账单-' + curDate.format("yyMMdd") + '.xlsx';
+let zq_file = '生成的excel'+path.sep+'既有债权列表-' + curDate.format("yyMMdd") + '.xlsx';
 let tpl_path = 'word_tpls';
 let tpl_tmp_path = 'output';
 let tpl_files;//模板文件数组
