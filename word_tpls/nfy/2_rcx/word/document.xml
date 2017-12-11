@@ -3717,7 +3717,7 @@
                     <w:szCs w:val="15"/>
                     <w:u w:val="single"/>
                 </w:rPr>
-                <w:t>R3BORROWER_MONEYT</w:t>
+                <w:t>R3BORROWER_MNYT</w:t>
             </w:r>
             <w:r>
                 <w:rPr>
@@ -3772,7 +3772,7 @@
                     <w:sz w:val="15"/>
                     <w:szCs w:val="15"/>
                 </w:rPr>
-                <w:t xml:space="preserve">  自款款项到账次日起，上述债权转让即生效，债权转让生效后，署有本人签章的本文件即代表受让人对上述债权的所有权。</w:t>
+                <w:t xml:space="preserve">    自款款项到账次日起，上述债权转让即生效，债权转让生效后，署有本人签章的本文件即代表受让人对上述债权的所有权。</w:t>
             </w:r>
         </w:p>
         <w:p w14:paraId="0535462E" w14:textId="6DADAA28" w:rsidR="00587113" w:rsidRDefault="00750624">

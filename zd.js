@@ -117,7 +117,7 @@ let map = {
     zqzr: {//债权转让
         global: {
             "R3BORROWER_MONEY": "人民币数字",
-            "R3BORROWER_MONEYT": "人民币老写",
+            "R3BORROWER_MNYT": "人民币老写",
         },
         part: {
             "R3BORROWER1": "借款人",
@@ -326,8 +326,8 @@ function replaceData() {
                     if (needZqZr && j == jqRows.length - 1) {
                         //R2BORROWER_MONEY2
                         map.zqzr.global.R3BORROWER_MONEY = map.zq.part.R2BORROWER_MONEY2;
-                        map.zqzr.global.R3BORROWER_MONEYT = utils.smalltoBIG(Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', '')));
-                        // console.log("-------", map.zqzr.global.R3BORROWER_MONEY, map.zqzr.global.R3BORROWER_MONEYT);
+                        map.zqzr.global.R3BORROWER_MNYT = utils.smalltoBIG(Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', '')));
+                        // console.log("-------", map.zqzr.global.R3BORROWER_MONEY, map.zqzr.global.R3BORROWER_MNYT);
 
                         map.zqzr.part.R3BORROWER1 = map.zq.part.R2BORROWER;
                         map.zqzr.part.R3BORROWER_CODE = map.zq.part.R2BORROWER_CODE;
