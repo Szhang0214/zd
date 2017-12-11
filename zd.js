@@ -91,11 +91,11 @@ let map = {
     part: {
         //收益信息
         "R1DATE": "",//报告日期
-        "R1SHPAY": "",
-        "R1SRMN": "",
-        "R1HSMN": "",
-        "R1BGRZC": "",
-        "R1BGRSY": "",
+        "R1SHPAY": "",//报告期借款人应还款金额
+        "R1SRMN": "",//受让债权金额 月润通为0
+        "R1HSMN": "",//回收金额
+        "R1BGRZC": "",//报告日资产总额
+        "R1BGRSY": "",//报告日收益
     },
     zq: {//债权
         global: {
@@ -261,7 +261,7 @@ function replaceData() {
                         map.part.R1HSMN = '0.00';
                     }
                     map.part.R1BGRZC = Number(rows[j][posZd.total_money]).formatMoney();
-                    map.part.R1BGRSY = map.part.R1SRMN;
+                    map.part.R1BGRSY = map.part.R1HSMN;
                     var $trClone = $replaceTr.clone();
                     var html = $trClone.html();
                     // console.log($trClone.text());
