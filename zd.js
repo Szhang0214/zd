@@ -261,7 +261,7 @@ function replaceData() {
                         map.part.R1HSMN = '0.00';
                     }
                     map.part.R1BGRZC = Number(rows[j][posZd.total_money]).formatMoney();
-                    map.part.R1BGRSY = map.part.R1HSMN;
+                    map.part.R1BGRSY = map.part.R1SHPAY;
                     var $trClone = $replaceTr.clone();
                     var html = $trClone.html();
                     // console.log($trClone.text());
