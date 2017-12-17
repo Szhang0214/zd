@@ -183,7 +183,7 @@ function writeXlsx(filename,data) {
 }
 
 
-function print(msg1, msg2) {
+function print() {
     for(let i=0;i<arguments.length;i++){
         console.error(arguments[i]);
     }

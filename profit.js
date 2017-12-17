@@ -10,6 +10,20 @@ const error = utils.error;
 const print = utils.print;
 utils.extend_Date();
 
+function parseFloatStr(str) {
+    if(typeof str=='string'){
+        return parseFloat(str.replace(',',''));
+    }
+    switch (typeof str){
+        case 'string':
+        case 'number':
+            return parseFloat(str.replace(',',''));
+        default:
+            throw new Error('not string');
+    }
+}
+
+
 var zdLines = utils.readXlsx(zdFile);//账单数据
 
 /**
@@ -221,17 +235,27 @@ function check_jq_data() {
         newRow[posJq.lent_code] = rows[0][posJq.lent_code];
         newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
         var profits = 0.00;
+        let deadlineMoney=0.00;
         rows.forEach(function (row) {
             profits += parseFloat(row[posJq.repay_money]);
         });
         //加上借款到期的钱 删除到期数据
         for(let i=0;i<fulfilled_ids.length;i++){
-            profits += parseFloat(fulfilledRows[i][posJq.repay_money]);
+            profits += parseFloatStr(fulfilledRows[i][posJq.repay_money]);
+            deadlineMoney += parseFloatStr(fulfilledRows[i][posJq.borrow_money]);
+            // error('b:'+deadlineMoney);
             rows.splice(fulfilled_ids[i],1);
         }
 
-        newRow[posJq.borrow_money] = round(profits, 2).formatMoney();//本期应还款金额
-        newRow[posJq.borrow_money2] = newRow[posJq.borrow_money];//本期应还款金额
+        let borrowMoneyNumber = round(profits+deadlineMoney, 2);
+        newRow[posJq.borrow_money] = borrowMoneyNumber.formatMoney();//初始受让债权价值
+        newRow[posJq.borrow_money2] = newRow[posJq.borrow_money];//初始受让债权价值
+        let rate=zdDict[code][posZd.rate];
+        let irate=interest[product][rate];
+
+        // print(newRow[posJq.borrow_money],irate,1);
+
+        newRow[posJq.repay_money] = compute_nfy_month_profit(borrowMoneyNumber,irate,1);//本期应还款金额
         newRow[posJq.identity] = '企业法人';
         newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
@@ -382,7 +406,7 @@ function compute_money(line) {
         case '年丰盈':
         case '单季丰':
         case '双季盈':
-            newProfit = compute_nfy_month_profit(line[posZd.lent_money], line[posZd.rate], irate, months);
+            newProfit = compute_nfy_month_profit(line[posZd.lent_money], irate, months);
             break;
         case '月润通':
             // /100/12
@@ -398,9 +422,8 @@ function round(num, digits) {
     // return Number(Number(month_profit).toFixed(number));
     return Math.round(num * 100) / 100;
 }
-function compute_nfy_month_profit(lent_money, rate, irate, months) {
+function compute_nfy_month_profit(lent_money, irate, months) {
     var totalProfit = 0.00;
-    rate = parseFloat(rate);//'12%'
     lent_money = parseFloat(lent_money);
     var month_profit = round(lent_money * irate / 100, 2);//一个月收益
     for (var i = 0; i < months; i++) {
