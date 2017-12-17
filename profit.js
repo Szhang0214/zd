@@ -190,10 +190,25 @@ function check_jq_data() {
         if (product == undefined) {
             error(`债权产品未知：`, zdDict);
         }
-        rows.forEach(function (row) {
+        //todo 借款到期，把钱转入下一个人
+        var fulfilled_ids=[];
+        var fulfilledRows=[];
+        rows.forEach(function (row,idx) {
             //还款期限-1
-            row[posJq.remain_months] = row[posJq.remain_months] - 1;
+            let remain_months = row[posJq.remain_months] - 1;
+            if(remain_months==0){
+                fulfilled_ids.push(idx);
+            }else {
+                row[posJq.remain_months] = remain_months;
+            }
         });
+
+        for(let i=0;i<fulfilled_ids.length;i++){
+            // fulfilledRows.push(rows.splice(fulfilled_ids[i],1));
+            fulfilledRows.push(rows[fulfilled_ids[i]]);
+        }
+
+        //todo 月润通到期没处理，逻辑本身也比较简单
         if (product == '月润通') {
             //月润通每月返回利润
             continue;
@@ -209,8 +224,14 @@ function check_jq_data() {
         rows.forEach(function (row) {
             profits += parseFloat(row[posJq.repay_money]);
         });
+        //加上借款到期的钱 删除到期数据
+        for(let i=0;i<fulfilled_ids.length;i++){
+            profits += parseFloat(fulfilledRows[i][posJq.repay_money]);
+            rows.splice(fulfilled_ids[i],1);
+        }
+
         newRow[posJq.borrow_money] = round(profits, 2).formatMoney();//本期应还款金额
-        newRow[posJq.borrow_money2] = round(profits, 2).formatMoney();//本期应还款金额
+        newRow[posJq.borrow_money2] = newRow[posJq.borrow_money];//本期应还款金额
         newRow[posJq.identity] = '企业法人';
         newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
