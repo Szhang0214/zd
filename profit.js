@@ -13,6 +13,11 @@ utils.extend_Date();
 function parseFloatStr(str) {
     switch (typeof str){
         case 'string':
+            // 12.00%
+            if(str.indexOf('%')>0){
+                return parseFloat(str.replace('%',''))/100;
+            }
+            // 300,000.00
             return parseFloat(str.replace(',',''));
         case 'number':
             return parseFloat(str)
@@ -231,11 +236,16 @@ function check_jq_data() {
             newRow[j] = '';
         }
         newRow[posJq.lent_code] = rows[0][posJq.lent_code];
-        newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
+        let eRate=rows[0][posJq.rate];
+        if(typeof eRate=='string' && eRate.indexOf('%')>0){
+            newRow[posJq.rate]=eRate;
+        }else {//小数表示形式
+            newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
+        }
         var profits = 0.00;
         let deadlineMoney=0.00;
         rows.forEach(function (row) {
-            profits += parseFloat(row[posJq.repay_money]);
+            profits += parseFloatStr(row[posJq.repay_money]);
         });
         //加上借款到期的钱 删除到期数据
         for(let i=0;i<fulfilled_ids.length;i++){
@@ -367,7 +377,7 @@ function compute_money(line) {
         console.log(line)
         process.exit(-1);
     }
-    var rate = parseFloat(line[posZd.rate]);
+    var rate = parseFloatStr(line[posZd.rate]);
 
     // for (i in interest[product]) {
     // }
@@ -389,7 +399,7 @@ function compute_money(line) {
 
     // console.log(d2.format('yyyyMMdd'),d1.format('yyyyMMdd'));
     // console.log('months='+months);
-    var rate = parseFloat(line[posZd.rate]);//12%
+    var rate = parseFloatStr(line[posZd.rate]);//12%
     var profit = line[posZd.lent_money] * rate / 12 * months;
     line[posZd.lent_money] = Number(line[posZd.lent_money]).toFixed(2);
     if(product=='月润通'){
@@ -422,7 +432,9 @@ function round(num, digits) {
 }
 function compute_nfy_month_profit(lent_money, irate, months) {
     var totalProfit = 0.00;
-    lent_money = parseFloat(lent_money);
+    // print(lent_money)
+    lent_money = parseFloatStr(lent_money);
+    // error(lent_money)
     var month_profit = round(lent_money * irate / 100, 2);//一个月收益
     for (var i = 0; i < months; i++) {
         lent_money += month_profit;

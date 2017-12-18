@@ -5,7 +5,7 @@ const process = require('process');
 const path=require('path');
 const unzip = require('unzip');
 
-
+//每三位用一个逗号分隔
 Number.prototype.formatMoney = function (places, thousand, decimal) {
     places = !isNaN(places = Math.abs(places)) ? places : 2;
     thousand = thousand || ",";
