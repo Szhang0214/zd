@@ -218,6 +218,7 @@ function check_jq_data() {
             }else {
                 row[posJq.remain_months] = remain_months;
             }
+            parseJqRow(row);
         });
 
         for(let i=0;i<fulfilled_ids.length;i++){
@@ -227,6 +228,9 @@ function check_jq_data() {
 
         //todo 月润通到期没处理，逻辑本身也比较简单
         if (product == '月润通') {
+            rows.forEach(function (row) {
+               formatJqRow(row)
+            });
             //月润通每月返回利润
             continue;
         }
@@ -249,14 +253,14 @@ function check_jq_data() {
         });
         //加上借款到期的钱 删除到期数据
         for(let i=0;i<fulfilled_ids.length;i++){
-            profits += parseFloatStr(fulfilledRows[i][posJq.repay_money]);
-            deadlineMoney += parseFloatStr(fulfilledRows[i][posJq.borrow_money]);
+            profits += fulfilledRows[i][posJq.repay_money];
+            deadlineMoney += fulfilledRows[i][posJq.borrow_money];
             // error('b:'+deadlineMoney);
             rows.splice(fulfilled_ids[i],1);
         }
 
         let borrowMoneyNumber = round(profits+deadlineMoney, 2);
-        newRow[posJq.borrow_money] = borrowMoneyNumber.formatMoney();//初始受让债权价值
+        newRow[posJq.borrow_money] = borrowMoneyNumber;//初始受让债权价值
         newRow[posJq.borrow_money2] = newRow[posJq.borrow_money];//初始受让债权价值
         let rate=zdDict[code][posZd.rate];
         let irate=interest[product][rate];
@@ -267,6 +271,9 @@ function check_jq_data() {
         newRow[posJq.identity] = '企业法人';
         newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
+        rows.forEach(function (row) {
+            formatJqRow(row)
+        });
     }
     //生成新的债权数据
     jqRows = [];
@@ -281,9 +288,33 @@ function check_jq_data() {
     // console.log(jqRows);
 }
 
+//对债券原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
+function parseJqRow(row) {
+    // borrow_money: '初始受让债权价值',//初始受让债权价值
+    //     borrow_money2: '报告日持有债权价值（元）',//初始受让债权价值
+    //     repay_day: '还款起始日期',//还款起始日期
+    //     repay_money: '本期还款金额',//本期还款金额
+    //     repay_months: '还款期限（月）',//还款期限（月）
+    //     remain_months: '剩余还款月数',//剩余还款月数
+    //     rate: '预计债权收益率（年）',//预计债权收益率（年）
+    row[posJq.borrow_money]=parseFloatStr(row[posJq.borrow_money]);
+    row[posJq.borrow_money2]=parseFloatStr(row[posJq.borrow_money2]);
+    row[posJq.repay_money]=parseFloatStr(row[posJq.repay_money]);
+    row[posJq.rate]=parseFloatStr(row[posJq.rate]);
+}
+
+//把数字、利率转换陈word表示形式(千分制、%)
+function formatJqRow(row){
+    row[posJq.borrow_money]=parseFloatStr(row[posJq.borrow_money]).formatMoney();
+    row[posJq.borrow_money2]=parseFloatStr(row[posJq.borrow_money2]).formatMoney();
+    row[posJq.repay_money]=parseFloatStr(row[posJq.repay_money]).formatMoney();
+    row[posJq.rate]=(parseFloatStr(row[posJq.rate])*100).toFixed(2)+'%';
+}
+
 function diffMonths(curDate, lentDate) {
     return (curDate.getYear() - lentDate.getYear()) * 12 + curDate.getMonth() - lentDate.getMonth();
 }
+
 function addMonths(oldDate, months) {
     var reportEndDate = new Date(oldDate);
     let months2 = months + oldDate.getMonth();
@@ -295,6 +326,8 @@ function addMonths(oldDate, months) {
     }
     return reportEndDate.format('yyyy.MM.dd');
 }
+
+
 function compute_gains() {
     for (var i1 = 0; i1 < zdLines.length; i1++) {
         // 初始出借金额的货币形式ie."50,000.00"包含分隔符'，',要进行转换
