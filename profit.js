@@ -11,13 +11,11 @@ const print = utils.print;
 utils.extend_Date();
 
 function parseFloatStr(str) {
-    if(typeof str=='string'){
-        return parseFloat(str.replace(',',''));
-    }
     switch (typeof str){
         case 'string':
-        case 'number':
             return parseFloat(str.replace(',',''));
+        case 'number':
+            return parseFloat(str)
         default:
             throw new Error('not string');
     }
