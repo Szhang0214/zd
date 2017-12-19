@@ -70,7 +70,7 @@ createDirIfNonExist(tpl_tmp_path);
 /**
  * 年丰盈 map
  */
-let map = {
+var gMap = {
     //每个key必须完全不同，不然再正则匹配的时候会出问题
     global: {
         "RUSER": "张三",
@@ -212,6 +212,9 @@ function replaceData() {
 
         function processData(docPath,rows, code)
         {
+            //防止多个协程处理，相互污染全局数据
+            let map=JSON.parse(JSON.stringify(gMap));
+
             //异步处理，定义局部变量
             //修改内容
             let fileToModify = docPath + '/word/document.xml';
