@@ -376,7 +376,7 @@ function replaceData() {
 
             //文件改好了，应该压缩成docx,然后删除目录继续下一个
             let tDate=new Date();
-            // tDate.setMonth(tDate.getMonth()-1);
+            tDate.setMonth(tDate.getMonth()-1);
             utils.makeDocx(docPath, rows[0][posZd.user] + tDate.format("MM月账单") + ".docx");
         }
 
