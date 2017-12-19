@@ -208,174 +208,181 @@ function replaceData() {
         }
         // print('模板文件：',tplFile);
 
-        unzipFile(tplFile, tpl_tmp_path,rows, code, function (docPath, rows, code) {
-            //异步处理，定义局部变量
-            //修改内容
-            let fileToModify = docPath + '/word/document.xml';
-            let document = fs.readFileSync(fileToModify, 'utf8');
-            //根据收益表修改内容
-            let first = true;
-            if (first) {
-                //总信息，一个报告中只有一次
-                map.global.RUSER = rows[0][posZd.user];
-                map.global.RSEX = rows[0][posZd.sex];
-                map.global.RRPT_BG_DATE = rows[rows.length - 1][posZd.report_start_date];
-                map.global.RRPT_ED_DATE = rows[rows.length - 1][posZd.report_end_date];
-                map.global.RRPT_DATE = rows[rows.length - 1][posZd.report_date];//报告日设置为最后一个报告日,作为当前的报告日
-                map.global.RLT_CODE = code;
-                map.global.RPODUCT = rows[0][posZd.product];
-                map.global.RLT_BG_DATE = rows[0][posZd.lent_date];
-                map.global.RLT_BG_MONEY = Number(rows[0][posZd.lent_money]).formatMoney();
-                map.global.RRPD_MONEY = Number(rows[rows.length - 1][posZd.total_money]).formatMoney();//报告日资产
-                let reportDate = new Date(map.global.RRPT_DATE);
-                // console.log(map.global.RRPT_DATE);
-                map.global.yyyy = reportDate.format('yyyy');
-                map.global.mm = reportDate.format('MM');
-                map.global.dd = reportDate.format('dd');
-                //客户身份证号
-                map.global.RIDCODE = rows[0][posZd.id_code];
-                first = false;
-                //替换
-                for (var r1 in map.global) {
-                    var e = new RegExp(r1, 'g');//全局替换
-                    document = document.replace(e, map.global[r1]);
-                }
+        unzipFile(tplFile, tpl_tmp_path,rows, code, wrapper(tpl_tmp_path,rows, code));
 
-            }
-            const $ = cheerio.load(document, {xmlMode: true});
-            //收益列表
-            (function () {
-                //收益表
-                var tProfit = $('w\\:tbl').eq(1);
-                //替换行
-                var $replaceTr = tProfit.find('w\\:tr').eq(2);
-                //替换收益行
-                for (var j = 0; j < rows.length; j++) {
-                    map.part.R1DATE = rows[j][posZd.report_date];
-                    map.part.R1SHPAY = Number(rows[j][posZd.profit]).formatMoney();
-                    if(product=='月润通'){
-                        map.part.R1HSMN = Number(rows[j][posZd.profit]).formatMoney();
-                        map.part.R1SRMN = '0.00';
-                    }else {
-                        map.part.R1SRMN = Number(rows[j][posZd.profit]).formatMoney();
-                        map.part.R1HSMN = '0.00';
+        function wrapper(docPath,rows,code) {
+            function processData()
+            {
+                //异步处理，定义局部变量
+                //修改内容
+                let fileToModify = docPath + '/word/document.xml';
+                let document = fs.readFileSync(fileToModify, 'utf8');
+                //根据收益表修改内容
+                let first = true;
+                if (first) {
+                    //总信息，一个报告中只有一次
+                    map.global.RUSER = rows[0][posZd.user];
+                    map.global.RSEX = rows[0][posZd.sex];
+                    map.global.RRPT_BG_DATE = rows[rows.length - 1][posZd.report_start_date];
+                    map.global.RRPT_ED_DATE = rows[rows.length - 1][posZd.report_end_date];
+                    map.global.RRPT_DATE = rows[rows.length - 1][posZd.report_date];//报告日设置为最后一个报告日,作为当前的报告日
+                    map.global.RLT_CODE = code;
+                    map.global.RPODUCT = rows[0][posZd.product];
+                    map.global.RLT_BG_DATE = rows[0][posZd.lent_date];
+                    map.global.RLT_BG_MONEY = Number(rows[0][posZd.lent_money]).formatMoney();
+                    map.global.RRPD_MONEY = Number(rows[rows.length - 1][posZd.total_money]).formatMoney();//报告日资产
+                    let reportDate = new Date(map.global.RRPT_DATE);
+                    // console.log(map.global.RRPT_DATE);
+                    map.global.yyyy = reportDate.format('yyyy');
+                    map.global.mm = reportDate.format('MM');
+                    map.global.dd = reportDate.format('dd');
+                    //客户身份证号
+                    map.global.RIDCODE = rows[0][posZd.id_code];
+                    first = false;
+                    //替换
+                    for (var r1 in map.global) {
+                        var e = new RegExp(r1, 'g');//全局替换
+                        document = document.replace(e, map.global[r1]);
                     }
-                    map.part.R1BGRZC = Number(rows[j][posZd.total_money]).formatMoney();
-                    map.part.R1BGRSY = map.part.R1SHPAY;
-                    var $trClone = $replaceTr.clone();
-                    var html = $trClone.html();
-                    // console.log($trClone.text());
-                    // console.log(map.part);
-                    var rHtml = replacePlaceHolders(html, map.part);
-                    $trClone.html(rHtml);
-                    tProfit.append($trClone);
-                }
-                $replaceTr.remove();
-            })();
 
-            //既有债权列表
-            let R2_SUM1 = 0.00; //汇总数据
-            let R2_SUM2 = 0.00;//汇总数据
-            (function () {
-                // 债权表
-                let tZq = $('w\\:tbl').eq(2);
-                let sumTr = tZq.find('w\\:tr').last();
-                //替换行
-                let $replaceTr = tZq.find('w\\:tr').eq(2);
-                let jqRows = userJq[code];//当前账单的债权列表
-                if (jqRows == undefined) {
-                    //首期没有债权 todo
-                    error(`账单${code}没有对应的债权`)
                 }
-                //替换债权行
-
-                for (let j = 0; j < jqRows.length; j++) {
-                    map.zq.part.R2BORROWER = jqRows[j][posJq.borrower];
-                    map.zq.part.R2BORROWER_CODE = jqRows[j][posJq.id_code];
-                    let pMoney = jqRows[j][posJq.borrow_money];
-                    // print('pMoney',pMoney,typeof pMoney);
-                    // if(typeof Number(pMoney) =='number'){
-                    //     pMoney=Number(pMoney).formatMoney();
-                    // }
-                    // print('pMoney2',pMoney)
-                    map.zq.part.R2BORROWER_MONEY1 = pMoney;
-                    map.zq.part.R2BORROWER_MONEY2 = map.zq.part.R2BORROWER_MONEY1;
-                    map.zq.part.R2BORROWER_RPD = jqRows[j][posJq.repay_day];
-                    map.zq.part.R2BORROWER_RPM = jqRows[j][posJq.repay_money];
-                    map.zq.part.R2_MTH = jqRows[j][posJq.repay_months];
-                    map.zq.part.R2_REM = jqRows[j][posJq.remain_months];
-                    // error('rate',jqRows[j][posJq.rate],jqRows[j]);
-                    let pRate = jqRows[j][posJq.rate];
-                    if(typeof pRate=="string"){
-                        pRate=pRate.replace('%','')/100;
+                const $ = cheerio.load(document, {xmlMode: true});
+                //收益列表
+                (function () {
+                    //收益表
+                    var tProfit = $('w\\:tbl').eq(1);
+                    //替换行
+                    var $replaceTr = tProfit.find('w\\:tr').eq(2);
+                    //替换收益行
+                    for (var j = 0; j < rows.length; j++) {
+                        map.part.R1DATE = rows[j][posZd.report_date];
+                        map.part.R1SHPAY = Number(rows[j][posZd.profit]).formatMoney();
+                        if(product=='月润通'){
+                            map.part.R1HSMN = Number(rows[j][posZd.profit]).formatMoney();
+                            map.part.R1SRMN = '0.00';
+                        }else {
+                            map.part.R1SRMN = Number(rows[j][posZd.profit]).formatMoney();
+                            map.part.R1HSMN = '0.00';
+                        }
+                        map.part.R1BGRZC = Number(rows[j][posZd.total_money]).formatMoney();
+                        map.part.R1BGRSY = map.part.R1SHPAY;
+                        var $trClone = $replaceTr.clone();
+                        var html = $trClone.html();
+                        // console.log($trClone.text());
+                        // console.log(map.part);
+                        var rHtml = replacePlaceHolders(html, map.part);
+                        $trClone.html(rHtml);
+                        tProfit.append($trClone);
                     }
-                    map.zq.part.R2_RATE = Number(pRate * 100).toFixed(2) + '%';
-                    print('rate',map.zq.part.R2_RATE);
-                    // console.log("-----" + map.zq.part.R2BORROWER_MONEY2 + ';' + map.zq.part.R2BORROWER_RPM);
-                    R2_SUM1 += Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', ''));
+                    $replaceTr.remove();
+                })();
 
-                    R2_SUM2 += Number((map.zq.part.R2BORROWER_RPM + '').replace(',', ''));
-                    let $trClone = $replaceTr.clone();
-                    let html = $trClone.html();
-                    // console.log($trClone.text());
-                    // console.log(map.zq.part);
-                    let rHtml = replacePlaceHolders(html, map.zq.part);
-                    $trClone.html(rHtml);
-                    $trClone.insertBefore(sumTr);
-                    //债权转让信息
-                    if (needZqZr && j == jqRows.length - 1) {
-                        //R2BORROWER_MONEY2
-                        map.zqzr.global.R3BORROWER_MONEY = map.zq.part.R2BORROWER_MONEY2;
-                        map.zqzr.global.R3BORROWER_MNYT = utils.smalltoBIG(Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', '')));
-                        // console.log("-------", map.zqzr.global.R3BORROWER_MONEY, map.zqzr.global.R3BORROWER_MNYT);
+                //既有债权列表
+                let R2_SUM1 = 0.00; //汇总数据
+                let R2_SUM2 = 0.00;//汇总数据
+                (function () {
+                    // 债权表
+                    let tZq = $('w\\:tbl').eq(2);
+                    let sumTr = tZq.find('w\\:tr').last();
+                    //替换行
+                    let $replaceTr = tZq.find('w\\:tr').eq(2);
+                    let jqRows = userJq[code];//当前账单的债权列表
+                    if (jqRows == undefined) {
+                        //首期没有债权 todo
+                        error(`账单${code}没有对应的债权`)
+                    }
+                    //替换债权行
 
-                        map.zqzr.part.R3BORROWER1 = map.zq.part.R2BORROWER;
-                        map.zqzr.part.R3BORROWER_CODE = map.zq.part.R2BORROWER_CODE;
-                        map.zqzr.part.R3BORROWER_MONEY = map.zq.part.R2BORROWER_MONEY1;
-                        map.zqzr.part.R3BORROWER_CERTIFICATE = jqRows[j][posJq.certificate];
-                        map.zqzr.part.R3BORROWER_IDENTITY = jqRows[j][posJq.identity];
-                        map.zqzr.part.R3BORROWER_USE = jqRows[j][posJq.usage];
-                        map.zqzr.part.R3BORROWER_RPD = map.zq.part.R2BORROWER_RPD;
-                        map.zqzr.part.R3BORROWER_RPM = map.zq.part.R2_MTH;
-                        map.zqzr.part.R3BORROWER_REM = map.zq.part.R2_REM;
-                        map.zqzr.part.R3BORROWER_RATE = map.zq.part.R2_RATE;
+                    for (let j = 0; j < jqRows.length; j++) {
+                        map.zq.part.R2BORROWER = jqRows[j][posJq.borrower];
+                        map.zq.part.R2BORROWER_CODE = jqRows[j][posJq.id_code];
+                        let pMoney = jqRows[j][posJq.borrow_money];
+                        // print('pMoney',pMoney,typeof pMoney);
+                        // if(typeof Number(pMoney) =='number'){
+                        //     pMoney=Number(pMoney).formatMoney();
+                        // }
+                        // print('pMoney2',pMoney)
+                        map.zq.part.R2BORROWER_MONEY1 = pMoney;
+                        map.zq.part.R2BORROWER_MONEY2 = map.zq.part.R2BORROWER_MONEY1;
+                        map.zq.part.R2BORROWER_RPD = jqRows[j][posJq.repay_day];
+                        map.zq.part.R2BORROWER_RPM = jqRows[j][posJq.repay_money];
+                        map.zq.part.R2_MTH = jqRows[j][posJq.repay_months];
+                        map.zq.part.R2_REM = jqRows[j][posJq.remain_months];
+                        // error('rate',jqRows[j][posJq.rate],jqRows[j]);
+                        let pRate = jqRows[j][posJq.rate];
+                        if(typeof pRate=="string"){
+                            pRate=pRate.replace('%','')/100;
+                        }
+                        map.zq.part.R2_RATE = Number(pRate * 100).toFixed(2) + '%';
+                        print('rate',map.zq.part.R2_RATE);
+                        // console.log("-----" + map.zq.part.R2BORROWER_MONEY2 + ';' + map.zq.part.R2BORROWER_RPM);
+                        R2_SUM1 += Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', ''));
+
+                        R2_SUM2 += Number((map.zq.part.R2BORROWER_RPM + '').replace(',', ''));
+                        let $trClone = $replaceTr.clone();
+                        let html = $trClone.html();
+                        // console.log($trClone.text());
+                        // console.log(map.zq.part);
+                        let rHtml = replacePlaceHolders(html, map.zq.part);
+                        $trClone.html(rHtml);
+                        $trClone.insertBefore(sumTr);
+                        //债权转让信息
+                        if (needZqZr && j == jqRows.length - 1) {
+                            //R2BORROWER_MONEY2
+                            map.zqzr.global.R3BORROWER_MONEY = map.zq.part.R2BORROWER_MONEY2;
+                            map.zqzr.global.R3BORROWER_MNYT = utils.smalltoBIG(Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', '')));
+                            // console.log("-------", map.zqzr.global.R3BORROWER_MONEY, map.zqzr.global.R3BORROWER_MNYT);
+
+                            map.zqzr.part.R3BORROWER1 = map.zq.part.R2BORROWER;
+                            map.zqzr.part.R3BORROWER_CODE = map.zq.part.R2BORROWER_CODE;
+                            map.zqzr.part.R3BORROWER_MONEY = map.zq.part.R2BORROWER_MONEY1;
+                            map.zqzr.part.R3BORROWER_CERTIFICATE = jqRows[j][posJq.certificate];
+                            map.zqzr.part.R3BORROWER_IDENTITY = jqRows[j][posJq.identity];
+                            map.zqzr.part.R3BORROWER_USE = jqRows[j][posJq.usage];
+                            map.zqzr.part.R3BORROWER_RPD = map.zq.part.R2BORROWER_RPD;
+                            map.zqzr.part.R3BORROWER_RPM = map.zq.part.R2_MTH;
+                            map.zqzr.part.R3BORROWER_REM = map.zq.part.R2_REM;
+                            map.zqzr.part.R3BORROWER_RATE = map.zq.part.R2_RATE;
+                        }
+                    }
+
+                    //计算汇总数据 global
+                    R2_SUM1 = Number(Number(Math.round(R2_SUM1 * 100) / 100).toFixed(2)).formatMoney();
+                    R2_SUM2 = Number(Number(Math.round(R2_SUM2 * 100) / 100).toFixed(2)).formatMoney();//转换成人民币表示形式
+                    $replaceTr.remove();
+                })();
+
+                //修改其他的汇总数据
+                let html = $.html();
+                html = html.replace(/R2_SUM1/, R2_SUM1);
+                html = html.replace(/R2_SUM2/, R2_SUM2);
+                //SN:序号替换
+                for (let i = 0; i < rows.length; i++) {
+                    html = html.replace(/SN/, i + 1);
+                }
+                //修改债权转让
+                if(needZqZr){
+                    for (let i in  map.zqzr.part) {
+                        let reg = new RegExp(i);
+                        html = html.replace(reg, map.zqzr.part[i]);
+                    }
+                    for (let j in  map.zqzr.global) {
+                        let reg = new RegExp(j, 'g');
+                        html = html.replace(reg, map.zqzr.global[j]);
                     }
                 }
 
-                //计算汇总数据 global
-                R2_SUM1 = Number(Number(Math.round(R2_SUM1 * 100) / 100).toFixed(2)).formatMoney();
-                R2_SUM2 = Number(Number(Math.round(R2_SUM2 * 100) / 100).toFixed(2)).formatMoney();//转换成人民币表示形式
-                $replaceTr.remove();
-            })();
+                //修改document.xml
+                fs.writeFileSync(fileToModify, html);
 
-            //修改其他的汇总数据
-            let html = $.html();
-            html = html.replace(/R2_SUM1/, R2_SUM1);
-            html = html.replace(/R2_SUM2/, R2_SUM2);
-            //SN:序号替换
-            for (let i = 0; i < rows.length; i++) {
-                html = html.replace(/SN/, i + 1);
+                //文件改好了，应该压缩成docx,然后删除目录继续下一个
+                let tDate=new Date();
+                // tDate.setMonth(tDate.getMonth()-1);
+                utils.makeDocx(docPath, rows[0][posZd.user] + tDate.format("MM月账单") + ".docx");
             }
-            //修改债权转让
-            if(needZqZr){
-                for (let i in  map.zqzr.part) {
-                    let reg = new RegExp(i);
-                    html = html.replace(reg, map.zqzr.part[i]);
-                }
-                for (let j in  map.zqzr.global) {
-                    let reg = new RegExp(j, 'g');
-                    html = html.replace(reg, map.zqzr.global[j]);
-                }
-            }
+            return processData;
+        }
 
-            //修改document.xml
-            fs.writeFileSync(fileToModify, html);
-
-            //文件改好了，应该压缩成docx,然后删除目录继续下一个
-            let tDate=new Date();
-            // tDate.setMonth(tDate.getMonth()-1);
-            utils.makeDocx(docPath, rows[0][posZd.user] + tDate.format("MM月账单") + ".docx");
-        });
     }
 }
 
