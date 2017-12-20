@@ -290,13 +290,6 @@ function check_jq_data() {
 
 //对债券原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
 function parseJqRow(row) {
-    // borrow_money: '初始受让债权价值',//初始受让债权价值
-    //     borrow_money2: '报告日持有债权价值（元）',//初始受让债权价值
-    //     repay_day: '还款起始日期',//还款起始日期
-    //     repay_money: '本期还款金额',//本期还款金额
-    //     repay_months: '还款期限（月）',//还款期限（月）
-    //     remain_months: '剩余还款月数',//剩余还款月数
-    //     rate: '预计债权收益率（年）',//预计债权收益率（年）
     row[posJq.borrow_money]=parseFloatStr(row[posJq.borrow_money]);
     row[posJq.borrow_money2]=parseFloatStr(row[posJq.borrow_money2]);
     row[posJq.repay_money]=parseFloatStr(row[posJq.repay_money]);
@@ -309,6 +302,15 @@ function formatJqRow(row){
     row[posJq.borrow_money2]=parseFloatStr(row[posJq.borrow_money2]).formatMoney();
     row[posJq.repay_money]=parseFloatStr(row[posJq.repay_money]).formatMoney();
     row[posJq.rate]=(parseFloatStr(row[posJq.rate])*100).toFixed(2)+'%';
+}
+
+//对账单原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
+function parseZdRow(row) {
+    row[posZd.lent_money]=parseFloatStr(row[posZd.lent_money]);
+    row[posJq.rate]=parseFloatStr(row[posZd.rate]);
+}
+//把数字、利率转换陈word表示形式(千分制、%)
+function formatZdRow(row){
 }
 
 function diffMonths(curDate, lentDate) {
@@ -336,6 +338,8 @@ function compute_gains() {
         //     line[k] = v.trim();
         // });
         let line = zdLines[i1];
+        parseZdRow(line);
+
         zdDict[line[posZd.lent_code]] = line;
 
         var lentDate = new Date(line[posZd.lent_date]);
