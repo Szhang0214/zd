@@ -445,6 +445,7 @@ function compute_gains() {
             newLine[posZd.report_end_date] = addMonths1(oldDate, i + 1);
 
             let oldReportDate = new MyDate(newLine[posZd.report_date].split(/[./]/));
+            // oldReportDate.setMonth(oldReportDate.getMonth()-1);//仿照Date
             newLine[posZd.report_date] = addMonths(oldReportDate, i);
             compute_money(newLine);
             // zdRows.push(newLine.join(','));

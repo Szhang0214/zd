@@ -113,7 +113,7 @@ function MyDate(fullYear,month,date) {
             this.date=d.getDate();
         }else {
             this.fullYear=d[0];
-            this.month=d[1];
+            this.month=parseInt(d[1])-1;//月份转化-1
             this.date=d[2];
         }
 
