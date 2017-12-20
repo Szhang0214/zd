@@ -105,10 +105,18 @@ function MyDate(fullYear,month,date) {
         this.month=month;
         this.date=date;
     }else if(arguments.length==1){
+
         let d=arguments[0];
-        this.fullYear=d.getFullYear();
-        this.month=d.getMonth();
-        this.date=d.getDate();
+        if(d instanceof Date || d instanceof MyDate){
+            this.fullYear=d.getFullYear();
+            this.month=d.getMonth();
+            this.date=d.getDate();
+        }else {
+            this.fullYear=d[0];
+            this.month=d[1];
+            this.date=d[2];
+        }
+
     }
 
 }
@@ -123,13 +131,17 @@ MyDate.prototype.setDate=function (date) {
 }
 
 MyDate.prototype.getFullYear=function () {
-    return this.fullYear;
+    let number = parseInt(this.fullYear);
+    if(isNaN(number)){
+        error('not number:'+this.fullYear);
+    }
+    return number;
 }
 MyDate.prototype.getMonth=function () {
-    return this.month;
+    return parseInt(this.month);
 }
 MyDate.prototype.getDate=function () {
-    return this.date;
+    return parseInt(this.date);
 }
 MyDate.prototype.toString=function () {
     return this.fullYear+";"+this.month+";"+this.date;

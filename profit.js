@@ -321,12 +321,12 @@ function addMonths(oldDate, months) {
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
-        reportEndDate.setFullYear(oldDate.getFullYear() + 1);
+        reportEndDate.setFullYear(oldDate.getFullYear()+1);
     } else {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>"+dateStr);
+    console.log(input+"==>最终报告日期："+dateStr);
     return dateStr;
 }
 
@@ -341,7 +341,6 @@ function addMonths1(oldDate, months) {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>"+dateStr);
     return dateStr;
 }
 function addMonths2(oldDate, months) {
@@ -355,7 +354,6 @@ function addMonths2(oldDate, months) {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>"+dateStr);
     return dateStr;
 }
 function addMonths3(oldDate, months) {
@@ -369,7 +367,6 @@ function addMonths3(oldDate, months) {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>"+dateStr);
     return dateStr;
 }
 
@@ -384,7 +381,7 @@ function addMonths4(oldDate, months) {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>"+dateStr);
+    console.log(input+"==>最终报告日期4:"+dateStr);
     return dateStr;
 }
 function compute_gains() {
@@ -406,7 +403,7 @@ function compute_gains() {
                 reportDate.setDate(30);
             }
         }
-        console.log("----"+reportDate.getFullYear(),reportDate.getMonth(),reportDate.getDate());
+        console.log("----"+'出借日期:'+line[posZd.lent_date]+'报告日期:'+reportDate.format('yyyy-MM-dd'));
 
         line[posZd.report_date] = addMonths4(reportDate, 1);
         // 报告开始日期
@@ -442,12 +439,12 @@ function compute_gains() {
 
         for (let i = 1; i < period - 1 && i < months; i++) {
             let newLine = line.slice();//生成每一期的数据
-            let oldDate = new Date(newLine[posZd.report_start_date]);
+            let oldDate = new MyDate(newLine[posZd.report_start_date].split(/[./]/));
             // 月数增加
             newLine[posZd.report_start_date] = addMonths2(oldDate, i);
             newLine[posZd.report_end_date] = addMonths1(oldDate, i + 1);
 
-            let oldReportDate = new Date(newLine[posZd.report_date]);
+            let oldReportDate = new MyDate(newLine[posZd.report_date].split(/[./]/));
             newLine[posZd.report_date] = addMonths(oldReportDate, i);
             compute_money(newLine);
             // zdRows.push(newLine.join(','));
