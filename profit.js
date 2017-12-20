@@ -320,7 +320,7 @@ function addMonths(oldDate, months) {
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
-        reportEndDate.setYear(oldDate.getYear() + 1);
+        reportEndDate.setFullYear(oldDate.getFullYear() + 1);
     } else {
         reportEndDate.setMonth(months2);//报告日
     }

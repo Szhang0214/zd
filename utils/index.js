@@ -211,7 +211,8 @@ function getDocxTmpDir(file, output_dir) {
     var index = name.lastIndexOf('.');
     var filename = name.substr(0, index);
     //压缩后的文件异步生成，防止命名冲突
-    var docx_dir = output_dir + path.sep + filename+(new Date().getTime() + parseInt(Math.random() * 100));
+    var docx_dir = output_dir + path.sep + filename+(new Date().getTime() + parseInt(Math.random() * 100000));
+    fs.writeFileSync(output_dir+path.sep+'/log'+(new Date().format('yyyy.MM.dd'))+'.txt',docx_dir+"\r\n",{flag:'a+'});
     return docx_dir;
 }
 
@@ -220,7 +221,7 @@ function getDocxTmpDir(file, output_dir) {
  * @param output_dir
  */
 function createDirIfNonExist(output_dir) {
-    //生成output目录
+    //生成output目录ª
     if (!fs.existsSync(output_dir)) {
         fs.mkdirSync(output_dir);
     }else {
@@ -269,6 +270,8 @@ function replacePlaceHolders(html, map) {
     }
     return html;
 }
+
+
 
 module.exports = {
     write_csv: write_csv,
