@@ -99,7 +99,41 @@ function makeDocx(docsDir, fileName) {
     // console.log("makeDocx end");
 
 }
+function MyDate(fullYear,month,date) {
+    if(arguments.length==3){
+        this.fullYear=fullYear;
+        this.month=month;
+        this.date=date;
+    }else if(arguments.length==1){
+        let d=arguments[0];
+        this.fullYear=d.getFullYear();
+        this.month=d.getMonth();
+        this.date=d.getDate();
+    }
 
+}
+MyDate.prototype.setFullYear=function (fullYear) {
+    this.fullYear=fullYear;
+}
+MyDate.prototype.setMonth=function (month) {
+    this.month=month;
+}
+MyDate.prototype.setDate=function (date) {
+    this.date=date;
+}
+
+MyDate.prototype.getFullYear=function () {
+    return this.fullYear;
+}
+MyDate.prototype.getMonth=function () {
+    return this.month;
+}
+MyDate.prototype.getDate=function () {
+    return this.date;
+}
+MyDate.prototype.toString=function () {
+    return this.fullYear+";"+this.month+";"+this.date;
+}
 
 function extend_Date() {
     // 对Date的扩展，将 Date 转化为指定格式的String
@@ -117,6 +151,16 @@ function extend_Date() {
             "s+": this.getSeconds(), //秒
             "q+": Math.floor((this.getMonth() + 3) / 3), //季度
             "S": this.getMilliseconds() //毫秒
+        };
+        if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+    MyDate.prototype.format=function (fmt) {
+        var o = {
+            "M+": this.getMonth() + 1, //月份
+            "d+": this.getDate(), //日
         };
         if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
         for (var k in o)
@@ -290,5 +334,6 @@ module.exports = {
     createDirIfNonExist,
     unzipFile,
     readCsvToLines,
-    replacePlaceHolders
+    replacePlaceHolders,
+    MyDate,
 };
