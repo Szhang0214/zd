@@ -1,10 +1,10 @@
 
-var fs = require('fs');
-var iconv = require('iconv-lite');
-var zdFile = 'data/账单初始数据.xlsx';
-var jqFile = "data/既有债权列表.xlsx";
-var outFile = "账单-yyyymmdd.csv";
-var process = require('process');
+let fs = require('fs');
+let iconv = require('iconv-lite');
+let zdFile = 'data/账单初始数据.xlsx';
+let jqFile = "data/既有债权列表.xlsx";
+let outFile = "账单-yyyymmdd.csv";
+let process = require('process');
 const utils = require('./utils');
 const error = utils.error;
 const print = utils.print;
@@ -27,7 +27,7 @@ function parseFloatStr(str) {
 }
 
 
-var zdLines = utils.readXlsx(zdFile);//账单数据
+let zdLines = utils.readXlsx(zdFile);//账单数据
 
 /**
  * 账单
@@ -35,19 +35,19 @@ var zdLines = utils.readXlsx(zdFile);//账单数据
 //第一行是表头
 let zdHeader = zdLines.splice(0, 1)[0];
 // console.log(zdHeader);
-var zdHeaderLine = zdHeader.join(',');
+let zdHeaderLine = zdHeader.join(',');
 // //删除空行
 // lines.forEach(function (line, idx) {
 //     if (line.trim() == '') {
 //         lines.splice(idx, 1);
 //     }
 // });
-var curDate = new Date();
+let curDate = new Date();
 
-var zdRows = [];//账单数据
+let zdRows = [];//账单数据
 let zdDict = {};// 'lent_code'=>[info],
 //账单字段位置
-var posZd = {
+let posZd = {
     user: '用户名',
     sex: '称呼',
     lent_code: '出借编号',
@@ -64,7 +64,7 @@ var posZd = {
     profit: '报告期内收益',//自动生成
 };
 //债权字段位置
-var posJq = {
+let posJq = {
     lent_code: '出借编号',//
     borrower: '借款人',//
     id_code: '借款人证件号',//
@@ -136,13 +136,13 @@ write_gains_csv();
 
 //检查债权列表数据
 function check_jq_data() {
-    // var jqLines = readCsvToLines(jqFile);
-    var jqLines = utils.readXlsx(jqFile);
-    var jqRows = [];
+    // let jqLines = readCsvToLines(jqFile);
+    let jqLines = utils.readXlsx(jqFile);
+    let jqRows = [];
     // printHeader(jqLines);
-    var jqHeaderFields = jqLines.splice(0, 1)[0];
-    // var jqHeader = jqHeaderFields.join(',');
-    var jqHeader = jqHeaderFields;
+    let jqHeaderFields = jqLines.splice(0, 1)[0];
+    // let jqHeader = jqHeaderFields.join(',');
+    let jqHeader = jqHeaderFields;
     (function updatePosJq() {
         let idx = 0;
         for (let i in posJq) {
@@ -157,19 +157,19 @@ function check_jq_data() {
     // error('posJq',posJq);
 
     // console.log(jqLines);
-    var jqFieldCnt = 0;
-    for (var i in posJq) {
+    let jqFieldCnt = 0;
+    for (let i in posJq) {
         jqFieldCnt++;
     }
     // console.log("jq fields:"+jqFieldCnt);
-    var code_last = -1;//出借编号
-    var jqDict = {//以出借编号位key,每出借信息数组为value
+    let code_last = -1;//出借编号
+    let jqDict = {//以出借编号位key,每出借信息数组为value
 
     };//key:code val:[]
     // print('jqLines',jqLines);
     jqLines.forEach(function (line, idx) {
-        // var fields = line.split(',');
-        var fields = line;
+        // let fields = line.split(',');
+        let fields = line;
         if (fields.length <10) {
             // print('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
             return;
@@ -200,16 +200,16 @@ function check_jq_data() {
     // 本期还款金额	还款期限（月）	剩余还款月数
     // 475	12	8
     // 4.51	4	2
-    for (var code in jqDict) {
-        var rows = jqDict[code];
+    for (let code in jqDict) {
+        let rows = jqDict[code];
 
         let product = zdDict[code][posZd.product];
         if (product == undefined) {
             error(`债权产品未知：`, zdDict);
         }
         //todo 借款到期，把钱转入下一个人
-        var fulfilled_ids=[];
-        var fulfilledRows=[];
+        let fulfilled_ids=[];
+        let fulfilledRows=[];
         rows.forEach(function (row,idx) {
             //还款期限-1
             let remain_months = row[posJq.remain_months] - 1;
@@ -235,8 +235,8 @@ function check_jq_data() {
             continue;
         }
 
-        var newRow = [];//年丰盈 新增记录
-        for (var j = 0; i < jqFieldCnt; j++) {
+        let newRow = [];//年丰盈 新增记录
+        for (let j = 0; j < jqFieldCnt; j++) {
             newRow[j] = '';
         }
         newRow[posJq.lent_code] = rows[0][posJq.lent_code];
@@ -246,7 +246,7 @@ function check_jq_data() {
         }else {//小数表示形式
             newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
         }
-        var profits = 0.00;
+        let profits = 0.00;
         let deadlineMoney=0.00;
         rows.forEach(function (row) {
             profits += parseFloatStr(row[posJq.repay_money]);
@@ -277,7 +277,7 @@ function check_jq_data() {
     }
     //生成新的债权数据
     jqRows = [];
-    for (var i in jqDict) {
+    for (let i in jqDict) {
         jqRows = jqRows.concat(jqDict[i].map(function (v) {
             // return v.join(',');
             return v;
@@ -309,16 +309,13 @@ function parseZdRow(row) {
     row[posZd.lent_money]=parseFloatStr(row[posZd.lent_money]);
     row[posJq.rate]=parseFloatStr(row[posZd.rate]);
 }
-//把数字、利率转换陈word表示形式(千分制、%)
-function formatZdRow(row){
-}
 
 function diffMonths(curDate, lentDate) {
     return (curDate.getYear() - lentDate.getYear()) * 12 + curDate.getMonth() - lentDate.getMonth();
 }
 
 function addMonths(oldDate, months) {
-    var reportEndDate = new Date(oldDate);
+    let reportEndDate = new Date(oldDate);
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
@@ -331,19 +328,14 @@ function addMonths(oldDate, months) {
 
 
 function compute_gains() {
-    for (var i1 = 0; i1 < zdLines.length; i1++) {
-        // 初始出借金额的货币形式ie."50,000.00"包含分隔符'，',要进行转换
-        // var line = zdLines[i].trim().replace(/\"(\d+)\,(\d+)\.00\"/, '$1$2').split(',');
-        // line.forEach(function (v, k) {
-        //     line[k] = v.trim();
-        // });
+    for (let i1 = 0; i1 < zdLines.length; i1++) {
         let line = zdLines[i1];
         parseZdRow(line);
 
         zdDict[line[posZd.lent_code]] = line;
 
-        var lentDate = new Date(line[posZd.lent_date]);
-        var reportDate = new Date(lentDate);
+        let lentDate = new Date(line[posZd.lent_date]);
+        let reportDate = new Date(lentDate);
         //计算报告日、报告开始日、报告结束日
         if (lentDate.getDate() <= 15) {
             reportDate.setDate(15);
@@ -363,11 +355,11 @@ function compute_gains() {
 
         compute_money(line);
         //当前用户 账单需要几个月的收益信息
-        var months = diffMonths(curDate, lentDate);
+        let months = diffMonths(curDate, lentDate);
         // zdRows.push(line.join(','));
         zdRows.push(line);
         //生成每个月的数据
-        var period = 0;
+        let period = 0;
         switch (line[posZd.product]) {
             case '年丰盈':
                 period = 12;
@@ -386,14 +378,14 @@ function compute_gains() {
         }
 
 
-        for (var i = 1; i < period - 1 && i < months; i++) {
-            var newLine = line.slice();//生成每一期的数据
-            var oldDate = new Date(newLine[posZd.report_start_date]);
+        for (let i = 1; i < period - 1 && i < months; i++) {
+            let newLine = line.slice();//生成每一期的数据
+            let oldDate = new Date(newLine[posZd.report_start_date]);
             // 月数增加
             newLine[posZd.report_start_date] = addMonths(oldDate, i);
             newLine[posZd.report_end_date] = addMonths(oldDate, i + 1);
 
-            var oldReportDate = new Date(newLine[posZd.report_date]);
+            let oldReportDate = new Date(newLine[posZd.report_date]);
             newLine[posZd.report_date] = addMonths(oldReportDate, i);
             compute_money(newLine);
             // zdRows.push(newLine.join(','));
@@ -407,14 +399,14 @@ function compute_money(line) {
     if(line[posZd.product]==undefined){
         error('数据错误',line);
     }
-    var product = line[posZd.product].trim();
+    let product = line[posZd.product].trim();
     if (!(product in interest)) {
         console.error('未知产品：' + product);
         console.log(product);
         console.log(line)
         process.exit(-1);
     }
-    var rate = parseFloatStr(line[posZd.rate]);
+    let rate = parseFloatStr(line[posZd.rate]);
 
     // for (i in interest[product]) {
     // }
@@ -426,18 +418,18 @@ function compute_money(line) {
         console.log(interest[product])
         process.exit(-1);
     }
-    var irate = interest[product][rate];
+    let irate = interest[product][rate];
 
 //报告期资产
-    var lentDate = new Date(line[posZd.lent_date].trim());
-    var d2 = new Date(line[posZd.report_end_date].trim());
+    let lentDate = new Date(line[posZd.lent_date].trim());
+    let d2 = new Date(line[posZd.report_end_date].trim());
     //计算投了多少个月了
-    var months = diffMonths(d2, lentDate);
+    let months = diffMonths(d2, lentDate);
 
     // console.log(d2.format('yyyyMMdd'),d1.format('yyyyMMdd'));
     // console.log('months='+months);
-    var rate = parseFloatStr(line[posZd.rate]);//12%
-    var profit = line[posZd.lent_money] * rate / 12 * months;
+    let rate1 = parseFloatStr(line[posZd.rate]);//12%
+    let profit = line[posZd.lent_money] * rate1 / 12 * months;
     line[posZd.lent_money] = Number(line[posZd.lent_money]).toFixed(2);
     if(product=='月润通'){
         line[posZd.total_money]=line[posZd.lent_money];
@@ -446,7 +438,7 @@ function compute_money(line) {
     }
 
 //报告期新的收益
-    var newProfit;
+    let newProfit;
     switch (product) {
         case '年丰盈':
         case '单季丰':
@@ -468,12 +460,12 @@ function round(num, digits) {
     return Math.round(num * 100) / 100;
 }
 function compute_nfy_month_profit(lent_money, irate, months) {
-    var totalProfit = 0.00;
+    let totalProfit = 0.00;
     // print(lent_money)
     lent_money = parseFloatStr(lent_money);
     // error(lent_money)
-    var month_profit = round(lent_money * irate / 100, 2);//一个月收益
-    for (var i = 0; i < months; i++) {
+    let month_profit = round(lent_money * irate / 100, 2);//一个月收益
+    for (let i = 0; i < months; i++) {
         lent_money += month_profit;
         totalProfit = month_profit;
         month_profit = round(lent_money * irate / 100);
@@ -484,11 +476,11 @@ function compute_nfy_month_profit(lent_money, irate, months) {
 
 //收益表
 function write_gains_csv() {
-    var write_csv = require('./utils').write_csv;
-    var d = new Date();
+    let write_csv = require('./utils').write_csv;
+    let d = new Date();
     // zdRows.unshift(zdHeaderLine);
     zdRows.unshift(zdHeader);
-    var sy_file = '账单-' + d.format("yyMMdd");
+    let sy_file = '账单-' + d.format("yyMMdd");
     // write_csv(zdRows, sy_file);
     utils.writeXlsx(sy_file, zdRows);
     console.log("written to " + sy_file);
@@ -496,10 +488,10 @@ function write_gains_csv() {
 }
 //债权表
 function write_jq_csv(rows, headerLine) {
-    // var write_csv = require('./utils').write_csv;
-    var d = new Date();
+    // let write_csv = require('./utils').write_csv;
+    let d = new Date();
     rows.unshift(headerLine);
-    var jq_file = '既有债权列表-' + d.format("yyMMdd") + '.xlsx';
+    let jq_file = '既有债权列表-' + d.format("yyMMdd") + '.xlsx';
     // write_csv(rows, jq_file);
     utils.writeXlsx(jq_file, rows);
     console.log("written to " + jq_file);
@@ -507,26 +499,7 @@ function write_jq_csv(rows, headerLine) {
 }
 
 
-function printHeader(lines) {
-    var header = {};
-    lines[0].split(',').forEach(function (v, idx) {
-        // console.log(idx + ':"' + v + '",')
-        header[idx] = (v.trim())
-    });
-    console.log("header:");
-    for (i in header) {
-        console.log(i + ":" + header[i]);
-    }
-}
 
-function readCsvToLines(filename) {
-    var bytes = fs.readFileSync(filename);
-    var content = iconv.decode(bytes, 'gbk');
-    var lines = content.split("\r\n");//客户名称
-    return lines;
-}
-function test(call) {
-    call();
-    process.exit(1);
-}
+
+
 
