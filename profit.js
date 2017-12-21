@@ -21,9 +21,9 @@ function parseFloatStr(str) {
             // 300,000.00
             return parseFloat(str.replace(',',''));
         case 'number':
-            return parseFloat(str)
+            return parseFloat(str);
         default:
-            throw new Error('not string');
+            throw new Error(str+' is not string:'+typeof str);
     }
 }
 
@@ -204,9 +204,13 @@ function check_jq_data() {
     for (let code in jqDict) {
         let rows = jqDict[code];
 
-        let product = zdDict[code][posZd.product];
+        let zdInfo = zdDict[code];
+        if(zdInfo==undefined){
+            error("缺少出借编号对应的账单数据，编号为:"+code)
+        }
+        let product = zdInfo[posZd.product];
         if (product == undefined) {
-            error(`债权产品未知：`, zdDict);
+            error(`账单数据中的产品类型未知：`, zdDict);
         }
         //todo 借款到期，把钱转入下一个人
         let fulfilled_ids=[];
