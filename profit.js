@@ -30,6 +30,18 @@ function parseFloatStr(str) {
 
 let zdLines = utils.readXlsx(zdFile);//账单数据
 
+let validLines=0;
+
+for(let i=0;i<zdLines.length;i++){
+    if(zdLines[i].length>1){
+        validLines++
+    }else {
+        break;
+    }
+}
+print("账单行数:"+validLines);
+zdLines=zdLines.splice(0,validLines);
+
 /**
  * 账单
  */
@@ -289,7 +301,7 @@ function check_jq_data() {
         }));
     }
     write_jq_csv(jqRows, jqHeader);
-    console.log("-- 新的债权列表 --")
+    // console.log("-- 新的债权列表 --")
     // console.log(jqRows);
 }
 
@@ -385,7 +397,7 @@ function addMonths4(oldDate, months) {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>最终报告日期4:"+dateStr);
+    // console.log(input+"==>最终报告日期4:"+dateStr);
     return dateStr;
 }
 function compute_gains() {
@@ -407,7 +419,7 @@ function compute_gains() {
                 reportDate.setDate(30);
             }
         }
-        console.log("----"+'出借日期:'+line[posZd.lent_date]+'报告日期:'+reportDate.format('yyyy-MM-dd'));
+        // console.log("----"+'出借日期:'+line[posZd.lent_date]+'报告日期:'+reportDate.format('yyyy-MM-dd'));
 
         line[posZd.report_date] = addMonths4(reportDate, 1);
         // 报告开始日期
