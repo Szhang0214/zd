@@ -28,19 +28,22 @@ function parseFloatStr(str) {
 }
 
 
-let zdLines = utils.readXlsx(zdFile);//账单数据
+let zdRawLines = utils.readXlsx(zdFile);//账单数据
 
-let validLines=0;
+zdLines=removeEmptyLines(zdRawLines);
+print("请检查账单有效行数："+zdLines.length);
+function removeEmptyLines(lines) {
+    let validLines=0;
 
-for(let i=0;i<zdLines.length;i++){
-    if(zdLines[i].length>1){
-        validLines++
-    }else {
-        break;
+    for(let i=0;i<lines.length;i++){
+        if(lines[i].length>1){
+            validLines++
+        }else {
+            break;
+        }
     }
+    return lines.splice(0,validLines);
 }
-print("账单行数:"+validLines);
-zdLines=zdLines.splice(0,validLines);
 
 /**
  * 账单
@@ -150,7 +153,9 @@ write_gains_csv();
 //检查债权列表数据
 function check_jq_data() {
     // let jqLines = readCsvToLines(jqFile);
-    let jqLines = utils.readXlsx(jqFile);
+    let jqRawLines = utils.readXlsx(jqFile);
+    let jqLines=removeEmptyLines(jqRawLines);
+    print("请检查债权有效行数:"+jqLines.length);
     let jqRows = [];
     // printHeader(jqLines);
     let jqHeaderFields = jqLines.splice(0, 1)[0];
@@ -342,7 +347,6 @@ function addMonths(oldDate, months) {
         reportEndDate.setMonth(months2);//报告日
     }
     let dateStr = reportEndDate.format('yyyy.MM.dd');
-    console.log(input+"==>最终报告日期："+dateStr);
     return dateStr;
 }
 
