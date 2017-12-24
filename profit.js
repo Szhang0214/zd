@@ -371,7 +371,7 @@ function diffMonths(curDate, lentDate) {
     return (curDate.getYear() - lentDate.getYear()) * 12 + curDate.getMonth() - lentDate.getMonth();
 }
 
-function addMonths(oldDate, months) {
+function addMonthsReportEnd(oldDate, months) {
     let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
     let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
@@ -381,11 +381,11 @@ function addMonths(oldDate, months) {
     } else {
         reportEndDate.setMonth(months2);//报告日
     }
-    let dateStr = reportEndDate.format('yyyy.MM.dd');
-    return dateStr;
+    // let dateStr = reportEndDate.formatReportEnd();
+    return reportEndDate;
 }
 
-function addMonths1(oldDate, months) {
+function addMonthsReportDay(oldDate, months) {
     let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
     let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
@@ -395,21 +395,33 @@ function addMonths1(oldDate, months) {
     } else {
         reportEndDate.setMonth(months2);//报告日
     }
-    let dateStr = reportEndDate.format('yyyy.MM.dd');
+    if (reportEndDate.getMonth() == 1) {
+        reportEndDate.setDate(28);
+    } else {
+        reportEndDate.setDate(30);
+    }
+
+    let dateStr = reportEndDate.formatReportDay();
     return dateStr;
 }
-function addMonths2(oldDate, months) {
+function addMonthsReportStart(oldDate, months) {
     let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
-    let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
+    let startDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
-        reportEndDate.setMonth(months2 - 12);
-        reportEndDate.setFullYear(oldDate.getFullYear() + 1);
+        startDate.setMonth(months2 - 12);
+        startDate.setFullYear(oldDate.getFullYear() + 1);
     } else {
-        reportEndDate.setMonth(months2);//报告日
+        startDate.setMonth(months2);//报告日
     }
-    let dateStr = reportEndDate.format('yyyy.MM.dd');
-    return dateStr;
+    if(oldDate.getDate()>30 && [4,6,8,10].indexOf(startDate.getMonth()+1)>-1){
+        oldDate.setDate(30);
+    }
+    //2月份
+    if(oldDate.getDate()>28 && startDate.getMonth()==1){
+        oldDate.setDate(28);
+    }
+    return startDate;
 }
 function addMonths3(oldDate, months) {
     let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
@@ -464,14 +476,14 @@ function compute_gains() {
         // 报告开始日期
         line[posZd.report_start_date] = lentDate.format('yyyy.MM.dd');
         //报告结束日期
-        line[posZd.report_end_date] = addMonths3(lentDate, 1);
+        line[posZd.report_end_date] = addMonthsReportDay(lentDate, 1);
 
 
         compute_money(line);
         //当前用户 账单需要几个月的收益信息
         let months = diffMonths(curDate, lentDate);
         // zdRows.push(line.join(','));
-        zdRows.push(line);
+        // zdRows.push(line);
         //生成每个月的数据
         let period = 0;
         switch (line[posZd.product]) {
@@ -491,21 +503,29 @@ function compute_gains() {
                 error('产品周期-未知产品');
         }
 
-
-        for (let i = 1; i < period - 1 && i < months; i++) {
+        let lastLine=null;
+        for (let i = 0; i < period - 1 && i < months; i++) {
             let newLine = line.slice();//生成每一期的数据
             parseZdRow(newLine);
             let oldDate = new MyDate(newLine[posZd.report_start_date].split(/[./]/));
             // 月数增加
-            newLine[posZd.report_start_date] = addMonths2(oldDate, i);
-            newLine[posZd.report_end_date] = addMonths1(oldDate, i + 1);
+            let startDate;
+            if(lastLine==null){
+                startDate= addMonthsReportStart(oldDate, i)
+            }else {
+                //这个月开始等于上个月结束
+                startDate=new MyDate(lastLine[posZd.report_end_date].split(/[./]/));
+            }
+            newLine[posZd.report_start_date] = startDate.formatReportEnd();
+            newLine[posZd.report_end_date] = addMonthsReportEnd(startDate, 1).formatReportEnd();
 
-            let oldReportDate = new MyDate(newLine[posZd.report_date].split(/[./]/));
+            // let oldReportDate = new MyDate(newLine[posZd.report_date].split(/[./]/));
             // oldReportDate.setMonth(oldReportDate.getMonth()-1);//仿照Date
-            newLine[posZd.report_date] = addMonths(oldReportDate, i);
+            newLine[posZd.report_date] = addMonthsReportDay(oldDate, i+1);
             compute_money(newLine);
             // zdRows.push(newLine.join(','));
             zdRows.push(newLine);
+            lastLine=newLine;
         }
 
         formatZdRow(line)

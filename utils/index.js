@@ -179,7 +179,24 @@ function extend_Date() {
             if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         return fmt;
     };
-
+    MyDate.prototype.formatReportDay = function () {
+        let m = this.getMonth() + 1;
+        // yyyy.MM.dd
+        return this.getFullYear() + "." + (m < 10 ? "0" + m : "" + m) + "." + (m == 2 ? '28' : '30');
+    };
+    MyDate.prototype.formatReportEnd = function () {
+        let m = this.getMonth() + 1;
+        let mths = [1,3, 5, 7, 8, 10, 12];
+        if (this.getDate() >30 && mths.indexOf(m) == -1) {
+            this.setDate(30);
+        }
+        if(m==2 && this.getDate()>28){
+            this.setDate(28);
+        }
+        let date=this.getDate();
+        let dateStr = date < 10 ? '0' + date : date;
+        return this.getFullYear() + "." + (m < 10 ? "0" + m : "" + m) + "." + dateStr;
+    };
 // var time1 = new Date().Format("yyyy.MM.dd");
 //     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");
 }
