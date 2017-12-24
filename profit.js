@@ -175,7 +175,7 @@ function check_jq_data() {
         // let fields = line.split(',');
         let fields = line;
         if (fields.length < 10) {
-            // print('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
+            print('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
             return;
         } else if (fields.length < jqFieldCnt) {
             fields[posJq.certificate] = fields[posJq.certificate] ? fields[posJq.certificate] : '';
@@ -186,7 +186,6 @@ function check_jq_data() {
             if (v.trim) {
                 fields[idx] = v.trim();//每个字段去掉空格
             }
-
         });
 
         // error('fields',fields);
@@ -198,9 +197,10 @@ function check_jq_data() {
 
         jqRows.push(fields);
     });
+
     // error('jqDict',jqDict,'zdDict',zdDict);
 
-    //修改债权数据  todo
+    //修改债权数据
     // 本期还款金额	还款期限（月）	剩余还款月数
     // 475	12	8
     // 4.51	4	2
@@ -215,7 +215,7 @@ function check_jq_data() {
         if (product == undefined) {
             error(`账单数据中的产品类型未知：`, zdDict);
         }
-        //todo 借款到期，把钱转入下一个人
+        //借款到期，把钱转入下一个人
         let fulfilled_ids = [];
         let fulfilledRows = [];
         rows.forEach(function (row, idx) {
@@ -294,6 +294,43 @@ function check_jq_data() {
             return v;
         }));
     }
+    // 首期账单添加债权数据()
+    Object.keys(zdDict).forEach(function (lent_code) {
+        if(!(lent_code in jqDict)){
+            console.log("首期账单,出借编号为："+lent_code);
+            let zdInfo = zdDict[lent_code];
+
+            let newRow=[];
+            for (let i in posJq){
+                newRow[posJq[i]]='';
+            }
+            newRow[posJq.lent_code]=lent_code;
+            newRow[posJq.identity] = '企业法人';
+            newRow[posJq.usage] = '资金周转';
+            newRow[posJq.borrow_money]=newRow[posJq.borrow_money2] = zdInfo[posZd.lent_money];
+            newRow[posJq.rate] = zdInfo[posZd.rate];
+            let product = zdInfo[posZd.product];
+            let repayMoney;
+            switch (product) {
+                case '年丰盈':
+                case '单季丰':
+                case '双季盈':
+                    let irate = interest[zdInfo[product]][parseFloatStr(zdInfo[posZd.rate])];
+                    repayMoney = compute_nfy_month_profit(newRow[posZd.lent_money], irate, 1);
+                    break;
+                case '月润通':
+                    // /100/12
+                    repayMoney = round(parseFloatStr(zdInfo[posZd.lent_money]) * parseFloatStr(zdInfo[posZd.rate]) / 12);
+                    break;
+                default:
+                    error(`未知产品类型:${product}`);
+            }
+            newRow[posJq.repay_money] = repayMoney;
+            formatJqRow(newRow);
+            jqRows.push(newRow);
+        }
+    });
+
     write_jq_csv(jqRows, jqHeader);
     // console.log("-- 新的债权列表 --")
     // console.log(jqRows);
