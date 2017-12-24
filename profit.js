@@ -273,26 +273,29 @@ function check_jq_data() {
         }
         let profits = 0.00;
         let deadlineMoney = 0.00;
-        rows.forEach(function (row) {
-            profits += parseFloatStr(row[posJq.repay_money]);
-        });
+        // rows.forEach(function (row) {
+        //     profits += parseFloatStr(row[posJq.repay_money]);
+        // });
+
+        let interest2 = interest[product][parseFloatStr(zdInfo[posZd.rate])];
+        let m=diffMonths(new Date(),new Date(zdInfo[posZd.lent_date].trim()))-1;
+
+        profits=compute_nfy_month_profit(zdInfo[posZd.lent_money],interest2,m);
         //加上借款到期的钱 删除到期数据
         for (let i = 0; i < fulfilled_ids.length; i++) {
-            profits += fulfilledRows[i][posJq.repay_money];
+            // profits += fulfilledRows[i][posJq.repay_money];
             deadlineMoney += fulfilledRows[i][posJq.borrow_money];
             // error('b:'+deadlineMoney);
-            // rows.splice(fulfilled_ids[i], 1);
+            rows.splice(fulfilled_ids[i], 1);
         }
 
         let borrowMoneyNumber = round(profits + deadlineMoney, 2);
         newRow[posJq.borrow_money] = borrowMoneyNumber;//初始受让债权价值
         newRow[posJq.borrow_money2] = newRow[posJq.borrow_money];//初始受让债权价值
-        let rate = zdDict[code][posZd.rate];
-        let irate = interest[product][rate];
 
         // print(newRow[posJq.borrow_money],irate,1);
 
-        newRow[posJq.repay_money] = compute_nfy_month_profit(borrowMoneyNumber, irate, 1);//本期应还款金额
+        newRow[posJq.repay_money] = compute_nfy_month_profit(borrowMoneyNumber, interest2, 1);//本期应还款金额
         newRow[posJq.identity] = '企业法人';
         newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
