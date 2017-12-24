@@ -54,8 +54,8 @@ let posJq = {
     certificate: '证书编号',//
     identity: '债务人情况',//债务人身份（企业法人）
     usage: '借款用途',//借款用途
-    borrow_money: '初始受让债权价值',//初始受让债权价值
-    borrow_money2: '报告日持有债权价值（元）',//初始受让债权价值
+    borrow_money: '初始受让债权价值',
+    borrow_money2: '报告日持有债权价值（元）',
     repay_day: '还款起始日期',//还款起始日期
     repay_money: '本期还款金额',//本期还款金额
     repay_months: '还款期限（月）',//还款期限（月）
@@ -305,14 +305,7 @@ function makeOneBill(code) {
             for (let j = 0; j < jqRows.length; j++) {
                 map.zq.part.R2BORROWER = jqRows[j][posJq.borrower];
                 map.zq.part.R2BORROWER_CODE = jqRows[j][posJq.id_code];
-                let pMoney = parseFloatStr(jqRows[j][posJq.borrow_money]);
-                // print('pmoney',pMoney)
-                // print('pMoney',pMoney,typeof pMoney);
-                // if(typeof Number(pMoney) =='number'){
-                //     pMoney=Number(pMoney).formatMoney();
-                // }
-                // print('pMoney2',pMoney)
-                map.zq.part.R2BORROWER_MONEY1 = pMoney;
+                map.zq.part.R2BORROWER_MONEY1 = jqRows[j][posJq.borrow_money];
                 map.zq.part.R2BORROWER_MONEY2 = map.zq.part.R2BORROWER_MONEY1;
                 map.zq.part.R2BORROWER_RPD = jqRows[j][posJq.repay_day];
                 map.zq.part.R2BORROWER_RPM = jqRows[j][posJq.repay_money];
