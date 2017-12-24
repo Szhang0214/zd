@@ -9,24 +9,17 @@ const error = utils.error;
 const print = utils.print;
 const MyDate = require('./utils').MyDate;
 const parseFloatStr = require('./utils').parseFloatStr;
+const removeEmptyLines=require('./utils').removeEmptyLines;
+const updatePosZd=require('./utils').updatePosZd;
 utils.extend_Date();
 
+//账单字段位置
+let posZd = require('./utils').posZd();;
 let zdRawLines = utils.readXlsx(zdFile);//账单数据
 
-zdLines = removeEmptyLines(zdRawLines);
+let zdLines = removeEmptyLines(zdRawLines);
 print("请检查账单有效行数：" + zdLines.length);
-function removeEmptyLines(lines) {
-    let validLines = 0;
 
-    for (let i = 0; i < lines.length; i++) {
-        if (lines[i].length > 1) {
-            validLines++
-        } else {
-            break;
-        }
-    }
-    return lines.splice(0, validLines);
-}
 
 /**
  * 账单
@@ -45,23 +38,8 @@ let curDate = new Date();
 
 let zdRows = [];//账单数据
 let zdDict = {};// 'lent_code'=>[info],
-//账单字段位置
-let posZd = {
-    user: '用户名',
-    sex: '称呼',
-    lent_code: '出借编号',
-    product: '产品名称',
-    rate: '利润率',
-    lent_date: '初始出借日期',
-    lent_money: '初始出借金额',
-    id_code: '身份证号',
-    company: '公司',
-    report_start_date: '报告开始日期',//自动生成
-    report_end_date: '报告结束日期',//自动生成
-    report_date: '报告日期',//自动生成
-    total_money: '报告日资产总额',//自动生成
-    profit: '报告期内收益',//自动生成
-};
+
+updatePosZd(posZd,zdHeader);
 
 //债权字段位置
 let posJq = {
@@ -80,18 +58,6 @@ let posJq = {
     rate: '预计债权收益率（年）',//预计债权收益率（年）
 
 };
-
-(function updatePosZd(posZd) {
-    let idx = 0;
-    for (let i in posZd) {
-        if (typeof posZd[i] == "number") {
-            posZd[i] = idx;
-        } else {
-            posZd[i] = zdHeader.indexOf(posZd[i]);
-        }
-        idx += 1;
-    }
-})(posZd);
 
 
 // console.log(zdHeader)

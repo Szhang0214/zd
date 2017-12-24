@@ -344,6 +344,49 @@ function parseFloatStr(str) {
             throw new Error(str + ' is not string:' + typeof str);
     }
 }
+
+function removeEmptyLines(lines) {
+    let validLines = 0;
+
+    for (let i = 0; i < lines.length; i++) {
+        if (lines[i].length > 1) {
+            validLines++
+        } else {
+            break;
+        }
+    }
+    return lines.splice(0, validLines);
+}
+
+function updatePosZd(posZd,zdHeader) {
+    let idx = 0;
+    for (let i in posZd) {
+        if (typeof posZd[i] == "number") {
+            posZd[i] = idx;
+        } else {
+            posZd[i] = zdHeader.indexOf(posZd[i]);
+        }
+        idx += 1;
+    }
+}
+
+let posZd={
+    user: '用户名',
+        sex: '称呼',
+    lent_code: '出借编号',
+    product: '产品名称',
+    rate: '利润率',
+    lent_date: '初始出借日期',
+    lent_money: '初始出借金额',
+    id_code: '身份证号',
+    company: '公司',
+    report_start_date: '报告开始日期',//自动生成
+    report_end_date: '报告结束日期',//自动生成
+    report_date: '报告日期',//自动生成
+    total_money: '报告日资产总额',//自动生成
+    profit: '报告期内收益',//自动生成
+};
+
 module.exports = {
     write_csv: write_csv,
     readFile: readFile,
@@ -364,4 +407,9 @@ module.exports = {
     replacePlaceHolders,
     MyDate,
     parseFloatStr,
+    removeEmptyLines,
+    updatePosZd,
+    posZd:function () {
+        return posZd;
+    },
 };
