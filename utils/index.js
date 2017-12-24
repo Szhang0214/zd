@@ -352,7 +352,7 @@ function parseFloatStr(str) {
                 return parseFloat(str.replace('%', '')) / 100;
             }
             // 300,000.00
-            return parseFloat(str.replace(',', ''));
+            return parseFloat(str.replace(/\,/g, ''));
         case 'number':
             return parseFloat(str);
         default:
