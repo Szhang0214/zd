@@ -8,25 +8,8 @@ const utils = require('./utils');
 const error = utils.error;
 const print = utils.print;
 const MyDate = require('./utils').MyDate;
+const parseFloatStr = require('./utils').parseFloatStr;
 utils.extend_Date();
-
-//把字符串或者数字转换为float,字符串中'%'，','会被替换
-function parseFloatStr(str) {
-    switch (typeof str) {
-        case 'string':
-            // 12.00%
-            if (str.indexOf('%') > 0) {
-                return parseFloat(str.replace('%', '')) / 100;
-            }
-            // 300,000.00
-            return parseFloat(str.replace(',', ''));
-        case 'number':
-            return parseFloat(str);
-        default:
-            throw new Error(str + ' is not string:' + typeof str);
-    }
-}
-
 
 
 

@@ -12,11 +12,12 @@ const cheerio = require('cheerio');
 const unzipFile = utils.unzipFile;
 const createDirIfNonExist = utils.createDirIfNonExist;
 const replacePlaceHolders=utils.replacePlaceHolders;
+const parseFloatStr = require('./utils').parseFloatStr;
 
 let curDate = new Date();
 //年丰盈五个月报告
-let sy_file = '生成的excel'+path.sep+'账单-' + curDate.format("yyMMdd") + '.xlsx';
-let zq_file = '生成的excel'+path.sep+'既有债权列表-' + curDate.format("yyMMdd") + '.xlsx';
+let zd_file = '生成的excel'+path.sep+'账单-' + curDate.format("yyMMdd") + '.xlsx';
+let jq_file = '生成的excel'+path.sep+'既有债权列表-' + curDate.format("yyMMdd") + '.xlsx';
 let tpl_path = 'word_tpls';
 let tpl_tmp_path = 'output';
 let tpl_files;//模板文件数组
@@ -137,10 +138,10 @@ let gMap = {
 };
 
 
-let lines = utils.readXlsx(sy_file);
-let jqLines = utils.readXlsx(zq_file);
+let zdLines = utils.readXlsx(zd_file);
+let jqLines = utils.readXlsx(jq_file);
 // 去掉header
-let zdHeader = lines.splice(0, 1)[0];
+let zdHeader = zdLines.splice(0, 1)[0];
 let jqHeaderFields = jqLines.splice(0, 1)[0];
 
 (function updatePosZd(posZd) {
@@ -237,8 +238,8 @@ function makeOneBill(code) {
             map.global.RLT_CODE = code;
             map.global.RPODUCT = rows[0][posZd.product];
             map.global.RLT_BG_DATE = rows[0][posZd.lent_date];
-            map.global.RLT_BG_MONEY = Number(rows[0][posZd.lent_money]).formatMoney();
-            map.global.RRPD_MONEY = Number(rows[rows.length - 1][posZd.total_money]).formatMoney();//报告日资产
+            map.global.RLT_BG_MONEY = parseFloatStr(rows[0][posZd.lent_money]).formatMoney();
+            map.global.RRPD_MONEY = parseFloatStr(rows[rows.length - 1][posZd.total_money]).formatMoney();//报告日资产
             let reportDate = new Date(map.global.RRPT_DATE);
             // console.log(map.global.RRPT_DATE);
             map.global.yyyy = reportDate.format('yyyy');
@@ -264,15 +265,15 @@ function makeOneBill(code) {
             //替换收益行
             for (let j = 0; j < rows.length; j++) {
                 map.part.R1DATE = rows[j][posZd.report_date];
-                map.part.R1SHPAY = Number(rows[j][posZd.profit]).formatMoney();
+                map.part.R1SHPAY = parseFloatStr(rows[j][posZd.profit]).formatMoney();
                 if(product=='月润通'){
-                    map.part.R1HSMN = Number(rows[j][posZd.profit]).formatMoney();
+                    map.part.R1HSMN = parseFloatStr(rows[j][posZd.profit]).formatMoney();
                     map.part.R1SRMN = '0.00';
                 }else {
-                    map.part.R1SRMN = Number(rows[j][posZd.profit]).formatMoney();
+                    map.part.R1SRMN = parseFloatStr(rows[j][posZd.profit]).formatMoney();
                     map.part.R1HSMN = '0.00';
                 }
-                map.part.R1BGRZC = Number(rows[j][posZd.total_money]).formatMoney();
+                map.part.R1BGRZC = parseFloatStr(rows[j][posZd.total_money]).formatMoney();
                 map.part.R1BGRSY = map.part.R1SHPAY;
                 let $trClone = $replaceTr.clone();
                 let html = $trClone.html();
@@ -391,11 +392,24 @@ function makeOneBill(code) {
     }
 }
 
+//对账单原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
+// function parseZdRow(row) {
+//     row[posZd.lent_money] = parseFloatStr(row[posZd.lent_money]);
+//     row[posJq.total_money] = parseFloatStr(row[posZd.rate]);
+// }
+//
+// //对债券原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
+// function parseJqRow(row) {
+//     row[posJq.borrow_money] = parseFloatStr(row[posJq.borrow_money]);
+//     row[posJq.borrow_money2] = parseFloatStr(row[posJq.borrow_money2]);
+//     row[posJq.repay_money] = parseFloatStr(row[posJq.repay_money]);
+//     row[posJq.rate] = parseFloatStr(row[posJq.rate]);
+// }
 
 function convertUserBills() {
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < zdLines.length; i++) {
         // let fields = lines[i].split(',');
-        let fields = lines[i];
+        let fields = zdLines[i];
         //去掉多余空格
         fields.forEach(function (v, k) {
             if (v.trim) {
