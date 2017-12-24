@@ -45,8 +45,10 @@ function insertProfits(profitDictArray,callback) {
             let lentCode = profitDict['lent_code'];
             let reportDate = profitDict['report_date'];
             let profit = profitDict['profit'];
-            db.run(`delete from profit where lent_code='${lentCode}' and report_date='${reportDate}' `, dbError('删除旧数据失败'));
-            db.run(`insert into profit values('${lentCode}','${reportDate}','${profit}')`, dbError('插入新数据失败'));
+            let reportMonth=reportDate.substr(0,reportDate.length-3);
+            console.log(reportMonth)
+            db.run(`delete from profit where lent_code='${lentCode}' and report_date='${reportMonth}' `, dbError('删除旧数据失败'));
+            db.run(`insert into profit values('${lentCode}','${reportMonth}','${profit}')`, dbError('插入新数据失败'));
         });
     });
 }
