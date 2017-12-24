@@ -1,4 +1,3 @@
-
 let fs = require('fs');
 let iconv = require('iconv-lite');
 let zdFile = 'data/账单初始数据.xlsx';
@@ -8,41 +7,44 @@ let process = require('process');
 const utils = require('./utils');
 const error = utils.error;
 const print = utils.print;
-const MyDate=require('./utils').MyDate;
+const MyDate = require('./utils').MyDate;
 utils.extend_Date();
 
+//把字符串或者数字转换为float,字符串中'%'，','会被替换
 function parseFloatStr(str) {
-    switch (typeof str){
+    switch (typeof str) {
         case 'string':
             // 12.00%
-            if(str.indexOf('%')>0){
-                return parseFloat(str.replace('%',''))/100;
+            if (str.indexOf('%') > 0) {
+                return parseFloat(str.replace('%', '')) / 100;
             }
             // 300,000.00
-            return parseFloat(str.replace(',',''));
+            return parseFloat(str.replace(',', ''));
         case 'number':
             return parseFloat(str);
         default:
-            throw new Error(str+' is not string:'+typeof str);
+            throw new Error(str + ' is not string:' + typeof str);
     }
 }
 
 
+
+
 let zdRawLines = utils.readXlsx(zdFile);//账单数据
 
-zdLines=removeEmptyLines(zdRawLines);
-print("请检查账单有效行数："+zdLines.length);
+zdLines = removeEmptyLines(zdRawLines);
+print("请检查账单有效行数：" + zdLines.length);
 function removeEmptyLines(lines) {
-    let validLines=0;
+    let validLines = 0;
 
-    for(let i=0;i<lines.length;i++){
-        if(lines[i].length>1){
+    for (let i = 0; i < lines.length; i++) {
+        if (lines[i].length > 1) {
             validLines++
-        }else {
+        } else {
             break;
         }
     }
-    return lines.splice(0,validLines);
+    return lines.splice(0, validLines);
 }
 
 /**
@@ -79,6 +81,7 @@ let posZd = {
     total_money: '报告日资产总额',//自动生成
     profit: '报告期内收益',//自动生成
 };
+
 //债权字段位置
 let posJq = {
     lent_code: '出借编号',//
@@ -154,8 +157,8 @@ write_gains_csv();
 function check_jq_data() {
     // let jqLines = readCsvToLines(jqFile);
     let jqRawLines = utils.readXlsx(jqFile);
-    let jqLines=removeEmptyLines(jqRawLines);
-    print("请检查债权有效行数:"+jqLines.length);
+    let jqLines = removeEmptyLines(jqRawLines);
+    print("请检查债权有效行数:" + jqLines.length);
     let jqRows = [];
     // printHeader(jqLines);
     let jqHeaderFields = jqLines.splice(0, 1)[0];
@@ -188,10 +191,10 @@ function check_jq_data() {
     jqLines.forEach(function (line, idx) {
         // let fields = line.split(',');
         let fields = line;
-        if (fields.length <10) {
+        if (fields.length < 10) {
             // print('债权列表数据列数不对',fields.length+'!='+jqFieldCnt,line)
             return;
-        }else if(fields.length<jqFieldCnt){
+        } else if (fields.length < jqFieldCnt) {
             fields[posJq.certificate] = fields[posJq.certificate] ? fields[posJq.certificate] : '';
             fields[posJq.identity] = '企业法人';
             fields[posJq.usage] = '资金周转';
@@ -222,28 +225,28 @@ function check_jq_data() {
         let rows = jqDict[code];
 
         let zdInfo = zdDict[code];
-        if(zdInfo==undefined){
-            error("缺少出借编号对应的账单数据，编号为:"+code)
+        if (zdInfo == undefined) {
+            error("缺少出借编号对应的账单数据，编号为:" + code)
         }
         let product = zdInfo[posZd.product];
         if (product == undefined) {
             error(`账单数据中的产品类型未知：`, zdDict);
         }
         //todo 借款到期，把钱转入下一个人
-        let fulfilled_ids=[];
-        let fulfilledRows=[];
-        rows.forEach(function (row,idx) {
+        let fulfilled_ids = [];
+        let fulfilledRows = [];
+        rows.forEach(function (row, idx) {
             //还款期限-1
             let remain_months = row[posJq.remain_months] - 1;
-            if(remain_months==0){
+            if (remain_months == 0) {
                 fulfilled_ids.push(idx);
-            }else {
+            } else {
                 row[posJq.remain_months] = remain_months;
             }
             parseJqRow(row);
         });
 
-        for(let i=0;i<fulfilled_ids.length;i++){
+        for (let i = 0; i < fulfilled_ids.length; i++) {
             // fulfilledRows.push(rows.splice(fulfilled_ids[i],1));
             fulfilledRows.push(rows[fulfilled_ids[i]]);
         }
@@ -251,7 +254,7 @@ function check_jq_data() {
         //todo 月润通到期没处理，逻辑本身也比较简单
         if (product == '月润通') {
             rows.forEach(function (row) {
-               formatJqRow(row)
+                formatJqRow(row)
             });
             //月润通每月返回利润
             continue;
@@ -262,34 +265,34 @@ function check_jq_data() {
             newRow[j] = '';
         }
         newRow[posJq.lent_code] = rows[0][posJq.lent_code];
-        let eRate=rows[0][posJq.rate];
-        if(typeof eRate=='string' && eRate.indexOf('%')>0){
-            newRow[posJq.rate]=eRate;
-        }else {//小数表示形式
-            newRow[posJq.rate] = (rows[0][posJq.rate]*100).formatMoney()+'%';
+        let eRate = rows[0][posJq.rate];
+        if (typeof eRate == 'string' && eRate.indexOf('%') > 0) {
+            newRow[posJq.rate] = eRate;
+        } else {//小数表示形式
+            newRow[posJq.rate] = (rows[0][posJq.rate] * 100).formatMoney() + '%';
         }
         let profits = 0.00;
-        let deadlineMoney=0.00;
+        let deadlineMoney = 0.00;
         rows.forEach(function (row) {
             profits += parseFloatStr(row[posJq.repay_money]);
         });
         //加上借款到期的钱 删除到期数据
-        for(let i=0;i<fulfilled_ids.length;i++){
+        for (let i = 0; i < fulfilled_ids.length; i++) {
             profits += fulfilledRows[i][posJq.repay_money];
             deadlineMoney += fulfilledRows[i][posJq.borrow_money];
             // error('b:'+deadlineMoney);
-            rows.splice(fulfilled_ids[i],1);
+            // rows.splice(fulfilled_ids[i], 1);
         }
 
-        let borrowMoneyNumber = round(profits+deadlineMoney, 2);
+        let borrowMoneyNumber = round(profits + deadlineMoney, 2);
         newRow[posJq.borrow_money] = borrowMoneyNumber;//初始受让债权价值
         newRow[posJq.borrow_money2] = newRow[posJq.borrow_money];//初始受让债权价值
-        let rate=zdDict[code][posZd.rate];
-        let irate=interest[product][rate];
+        let rate = zdDict[code][posZd.rate];
+        let irate = interest[product][rate];
 
         // print(newRow[posJq.borrow_money],irate,1);
 
-        newRow[posJq.repay_money] = compute_nfy_month_profit(borrowMoneyNumber,irate,1);//本期应还款金额
+        newRow[posJq.repay_money] = compute_nfy_month_profit(borrowMoneyNumber, irate, 1);//本期应还款金额
         newRow[posJq.identity] = '企业法人';
         newRow[posJq.usage] = '资金周转';
         rows.push(newRow);
@@ -312,24 +315,32 @@ function check_jq_data() {
 
 //对债券原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
 function parseJqRow(row) {
-    row[posJq.borrow_money]=parseFloatStr(row[posJq.borrow_money]);
-    row[posJq.borrow_money2]=parseFloatStr(row[posJq.borrow_money2]);
-    row[posJq.repay_money]=parseFloatStr(row[posJq.repay_money]);
-    row[posJq.rate]=parseFloatStr(row[posJq.rate]);
+    row[posJq.borrow_money] = parseFloatStr(row[posJq.borrow_money]);
+    row[posJq.borrow_money2] = parseFloatStr(row[posJq.borrow_money2]);
+    row[posJq.repay_money] = parseFloatStr(row[posJq.repay_money]);
+    row[posJq.rate] = parseFloatStr(row[posJq.rate]);
 }
 
 //把数字、利率转换陈word表示形式(千分制、%)
-function formatJqRow(row){
-    row[posJq.borrow_money]=parseFloatStr(row[posJq.borrow_money]).formatMoney();
-    row[posJq.borrow_money2]=parseFloatStr(row[posJq.borrow_money2]).formatMoney();
-    row[posJq.repay_money]=parseFloatStr(row[posJq.repay_money]).formatMoney();
-    row[posJq.rate]=(parseFloatStr(row[posJq.rate])*100).toFixed(2)+'%';
+function formatJqRow(row) {
+    row[posJq.borrow_money] = parseFloatStr(row[posJq.borrow_money]).formatMoney();
+    row[posJq.borrow_money2] = parseFloatStr(row[posJq.borrow_money2]).formatMoney();
+    row[posJq.repay_money] = parseFloatStr(row[posJq.repay_money]).formatMoney();
+    row[posJq.rate] = (parseFloatStr(row[posJq.rate]) * 100).toFixed(2) + '%';
+}
+
+//把数字、利率转换陈word表示形式(千分制、%)
+function formatZdRow(row) {
+    row[posZd.lent_money] = parseFloatStr(row[posZd.lent_money]).formatMoney();
+    row[posZd.total_money] = parseFloatStr(row[posZd.total_money]).formatMoney();
+    row[posZd.profit] = parseFloatStr(row[posZd.profit]).formatMoney();
+    row[posZd.rate] = (parseFloatStr(row[posZd.rate]) * 100).toFixed(2) + '%';
 }
 
 //对账单原始数据处理，把千分制数字转换为正常数字，把带%的小数转换成正常的小数
 function parseZdRow(row) {
-    row[posZd.lent_money]=parseFloatStr(row[posZd.lent_money]);
-    row[posJq.rate]=parseFloatStr(row[posZd.rate]);
+    row[posZd.lent_money] = parseFloatStr(row[posZd.lent_money]);
+    row[posJq.rate] = parseFloatStr(row[posZd.rate]);
 }
 
 function diffMonths(curDate, lentDate) {
@@ -337,12 +348,12 @@ function diffMonths(curDate, lentDate) {
 }
 
 function addMonths(oldDate, months) {
-    let input="--"+oldDate.getFullYear()+"-"+oldDate.getMonth()+"-"+months+"-"+oldDate.getDate();
-    let reportEndDate = new MyDate(oldDate.getFullYear(),oldDate.getMonth(),oldDate.getDate());
+    let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
+    let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
-        reportEndDate.setFullYear(oldDate.getFullYear()+1);
+        reportEndDate.setFullYear(oldDate.getFullYear() + 1);
     } else {
         reportEndDate.setMonth(months2);//报告日
     }
@@ -351,8 +362,8 @@ function addMonths(oldDate, months) {
 }
 
 function addMonths1(oldDate, months) {
-    let input="--"+oldDate.getFullYear()+"-"+oldDate.getMonth()+"-"+months+"-"+oldDate.getDate();
-    let reportEndDate = new MyDate(oldDate.getFullYear(),oldDate.getMonth(),oldDate.getDate());
+    let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
+    let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
@@ -364,8 +375,8 @@ function addMonths1(oldDate, months) {
     return dateStr;
 }
 function addMonths2(oldDate, months) {
-    let input="--"+oldDate.getFullYear()+"-"+oldDate.getMonth()+"-"+months+"-"+oldDate.getDate();
-    let reportEndDate = new MyDate(oldDate.getFullYear(),oldDate.getMonth(),oldDate.getDate());
+    let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
+    let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
@@ -377,8 +388,8 @@ function addMonths2(oldDate, months) {
     return dateStr;
 }
 function addMonths3(oldDate, months) {
-    let input="--"+oldDate.getFullYear()+"-"+oldDate.getMonth()+"-"+months+"-"+oldDate.getDate();
-    let reportEndDate = new MyDate(oldDate.getFullYear(),oldDate.getMonth(),oldDate.getDate());
+    let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
+    let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
@@ -391,8 +402,8 @@ function addMonths3(oldDate, months) {
 }
 
 function addMonths4(oldDate, months) {
-    let input="--"+oldDate.getFullYear()+"-"+oldDate.getMonth()+"-"+months+"-"+oldDate.getDate();
-    let reportEndDate = new MyDate(oldDate.getFullYear(),oldDate.getMonth(),oldDate.getDate());
+    let input = "--" + oldDate.getFullYear() + "-" + oldDate.getMonth() + "-" + months + "-" + oldDate.getDate();
+    let reportEndDate = new MyDate(oldDate.getFullYear(), oldDate.getMonth(), oldDate.getDate());
     let months2 = months + oldDate.getMonth();
     if (months2 >= 12) {
         reportEndDate.setMonth(months2 - 12);
@@ -459,6 +470,7 @@ function compute_gains() {
 
         for (let i = 1; i < period - 1 && i < months; i++) {
             let newLine = line.slice();//生成每一期的数据
+            parseZdRow(newLine);
             let oldDate = new MyDate(newLine[posZd.report_start_date].split(/[./]/));
             // 月数增加
             newLine[posZd.report_start_date] = addMonths2(oldDate, i);
@@ -472,12 +484,17 @@ function compute_gains() {
             zdRows.push(newLine);
         }
 
+        formatZdRow(line)
     }
 }
 
+/**
+ * 计算账单的数据：借款人应还款金额,受让金额，实际收益
+ * @param line
+ */
 function compute_money(line) {
-    if(line[posZd.product]==undefined){
-        error('数据错误',line);
+    if (line[posZd.product] == undefined) {
+        error('数据错误', line);
     }
     let product = line[posZd.product].trim();
     if (!(product in interest)) {
@@ -487,34 +504,29 @@ function compute_money(line) {
         process.exit(-1);
     }
     let rate = parseFloatStr(line[posZd.rate]);
-
-    // for (i in interest[product]) {
-    // }
     //出月润通以外每月的利息都会作为本次再次买入
     if (product != '月润通' && !(rate in interest[product])) {
         console.error('未知利润率：' + product + rate);
         console.log(product);
         console.log(line)
-        console.log(interest[product])
+        console.log(interest[product]);
         process.exit(-1);
     }
     let irate = interest[product][rate];
 
 //报告期资产
     let lentDate = new Date(line[posZd.lent_date].trim());
-    let d2 = new Date(line[posZd.report_end_date].trim());
+    let endDate = new Date(line[posZd.report_end_date].trim());
     //计算投了多少个月了
-    let months = diffMonths(d2, lentDate);
+    let months = diffMonths(endDate, lentDate);
 
-    // console.log(d2.format('yyyyMMdd'),d1.format('yyyyMMdd'));
-    // console.log('months='+months);
     let rate1 = parseFloatStr(line[posZd.rate]);//12%
-    let profit = line[posZd.lent_money] * rate1 / 12 * months;
-    line[posZd.lent_money] = Number(line[posZd.lent_money]).toFixed(2);
-    if(product=='月润通'){
-        line[posZd.total_money]=line[posZd.lent_money];
-    }else {
-        line[posZd.total_money] = round(parseInt(line[posZd.lent_money]) + profit, 2).toFixed(2);
+    let profit = round(line[posZd.lent_money] * rate1 / 12 * months,2);
+    // line[posZd.lent_money] = Number(line[posZd.lent_money]).toFixed(2);
+    if (product == '月润通') {
+        line[posZd.total_money] = line[posZd.lent_money];
+    } else {
+        line[posZd.total_money] = line[posZd.lent_money]+ profit;
     }
 
 //报告期新的收益
@@ -527,31 +539,37 @@ function compute_money(line) {
             break;
         case '月润通':
             // /100/12
-            newProfit = round(line[posZd.lent_money] * rate / 12).toFixed(2);
+            newProfit = round(line[posZd.lent_money] * rate / 12);
             break;
         default:
             error(`未知产品类型:${product}`);
     }
     line[posZd.profit] = newProfit;
+
+    formatZdRow(line);
 }
-//年丰盈月收益
+//把number或者number字符串进行四舍五入，保留digits小数位,返回number
 function round(num, digits) {
-    // return Number(Number(month_profit).toFixed(number));
-    return Math.round(num * 100) / 100;
+    digits = digits || 2;
+    return Math.round(num * Math.pow(10,digits)) / (Math.pow(10,digits));
 }
+//同round,返回字符串
+function roundStr(num, digits) {
+   return ""+round(num,digits);
+}
+//计算非月润通收益
 function compute_nfy_month_profit(lent_money, irate, months) {
-    let totalProfit = 0.00;
+    let nthMonthProfit = 0.00;
     // print(lent_money)
     lent_money = parseFloatStr(lent_money);
     // error(lent_money)
-    let month_profit = round(lent_money * irate / 100, 2);//一个月收益
+    let nextMonthProfit = round(lent_money * irate / 100);//一个月收益
+
     for (let i = 0; i < months; i++) {
-        lent_money += month_profit;
-        totalProfit = month_profit;
-        month_profit = round(lent_money * irate / 100);
+        nthMonthProfit += nextMonthProfit;
+        nextMonthProfit = round(nthMonthProfit * irate / 100);
     }
-    // Math.round(1.325*100)/100
-    return round(totalProfit, 2).toFixed(2);
+    return round(nthMonthProfit);
 }
 
 //收益表
