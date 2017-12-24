@@ -100,9 +100,10 @@ var jqRows = [];
 
 dao.getAll(null,function (rows) {
     rows.forEach(function (row) {
-       profitDbDict[row['lent_code']+row['report_date']]=parseFloatStr(row['profit']);
+        let key = row['lent_code']+ row['report_date'];
+       profitDbDict[key]=parseFloatStr(row['profit']);
     });
-    // console.log(profitDbDict);
+    console.log(profitDbDict);
     main();
 });
 
@@ -582,7 +583,7 @@ function compute_money(line) {
             // 除了月润通，都从数据库查询
             // newProfit = compute_nfy_month_profit(line[posZd.lent_money], irate, months);
             let date = line[posZd.report_date];
-            let month=date.substr(0,date.substr(0,date.length-3));
+            let month=date.substr(0,date.length-3);
             let key = line[posZd.lent_code]+ month;
             newProfit=key in profitDbDict ? profitDbDict[key]:'';
             break;
