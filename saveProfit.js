@@ -27,10 +27,14 @@ db.serialize(function () {
     // });
 
     zdLines.forEach(function (zdLine) {
+
+        let date = zdLine[posZd.report_date];
+        let month=date.substr(0,date.substr(0,date.length-3));
+
         dao.insertProfits([
             {
                 lent_code: zdLine[posZd.lent_code],
-                report_date: zdLine[posZd.report_date],
+                report_date: month,
                 profit: zdLine[posZd.profit]
             }
         ]);

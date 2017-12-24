@@ -581,7 +581,9 @@ function compute_money(line) {
         case '双季盈':
             // 除了月润通，都从数据库查询
             // newProfit = compute_nfy_month_profit(line[posZd.lent_money], irate, months);
-            let key = line[posZd.lent_code]+line[posZd.report_date];
+            let date = line[posZd.report_date];
+            let month=date.substr(0,date.substr(0,date.length-3));
+            let key = line[posZd.lent_code]+ month;
             newProfit=key in profitDbDict ? profitDbDict[key]:'';
             break;
         case '月润通':
