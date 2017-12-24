@@ -287,8 +287,8 @@ function makeOneBill(code) {
         })();
 
         //既有债权列表
-        let R2_SUM1 = 0.00; //汇总数据
-        let R2_SUM2 = 0.00;//汇总数据
+        map.zq.global.R2_SUM1=0.00;
+        map.zq.global.R2_SUM2=0.00;
         (function () {
             // 债权表
             let tZq = $('w\\:tbl').eq(2);
@@ -305,7 +305,8 @@ function makeOneBill(code) {
             for (let j = 0; j < jqRows.length; j++) {
                 map.zq.part.R2BORROWER = jqRows[j][posJq.borrower];
                 map.zq.part.R2BORROWER_CODE = jqRows[j][posJq.id_code];
-                let pMoney = jqRows[j][posJq.borrow_money];
+                let pMoney = parseFloatStr(jqRows[j][posJq.borrow_money]);
+                // print('pmoney',pMoney)
                 // print('pMoney',pMoney,typeof pMoney);
                 // if(typeof Number(pMoney) =='number'){
                 //     pMoney=Number(pMoney).formatMoney();
@@ -323,10 +324,9 @@ function makeOneBill(code) {
                     pRate=pRate.replace('%','')/100;
                 }
                 map.zq.part.R2_RATE = Number(pRate * 100).toFixed(2) + '%';
-                // console.log("-----" + map.zq.part.R2BORROWER_MONEY2 + ';' + map.zq.part.R2BORROWER_RPM);
-                R2_SUM1 += Number((map.zq.part.R2BORROWER_MONEY2 + '').replace(',', ''));
+                map.zq.global.R2_SUM1 += parseFloatStr(map.zq.part.R2BORROWER_MONEY2);
 
-                R2_SUM2 += Number((map.zq.part.R2BORROWER_RPM + '').replace(',', ''));
+                map.zq.global.R2_SUM2 += parseFloatStr(map.zq.part.R2BORROWER_RPM);
                 let $trClone = $replaceTr.clone();
                 let html = $trClone.html();
                 // console.log($trClone.text());
@@ -355,15 +355,19 @@ function makeOneBill(code) {
             }
 
             //计算汇总数据 global
-            R2_SUM1 = Number(Number(Math.round(R2_SUM1 * 100) / 100).toFixed(2)).formatMoney();
-            R2_SUM2 = Number(Number(Math.round(R2_SUM2 * 100) / 100).toFixed(2)).formatMoney();//转换成人民币表示形式
+            map.zq.global.R2_SUM1 = map.zq.global.R2_SUM1.formatMoney();
+            map.zq.global.R2_SUM2 = map.zq.global.R2_SUM2.formatMoney();//转换成人民币表示形式
             $replaceTr.remove();
         })();
 
         //修改其他的汇总数据
         let html = $.html();
-        html = html.replace(/R2_SUM1/, R2_SUM1);
-        html = html.replace(/R2_SUM2/, R2_SUM2);
+        html = html.replace(/R2_SUM1/, map.zq.global.R2_SUM1);
+        html = html.replace(/R2_SUM2/, map.zq.global.R2_SUM2);
+        console.log("====>",map.zq.global.R2_SUM1,map.zq.global.R2_SUM2);
+        if(map.zq.global.R2_SUM1<1 || map.zq.global.R2_SUM2<1){
+            error('汇总数据计算错误',map.zq.global);
+        }
         //SN:序号替换
         for (let i = 0; i < rows.length; i++) {
             html = html.replace(/SN/, i + 1);
