@@ -5,6 +5,7 @@
   "main": "dom.js",
   "dependencies": {
     "archiver": "^2.1.0",
+    "async": "^2.6.0",
     "cheerio": "^1.0.0-rc.2",
     "iconv-lite": "^0.4.19",
     "jszip": "^3.1.5",
