@@ -2,7 +2,7 @@ const iconv = require('iconv-lite');
 const fs = require('fs');
 const rd = require('rd');
 const process = require('process');
-const path=require('path');
+const path = require('path');
 const unzip = require('unzip');
 
 //每三位用一个逗号分隔
@@ -99,52 +99,52 @@ function makeDocx(docsDir, fileName) {
     // console.log("makeDocx end");
 
 }
-function MyDate(fullYear,month,date) {
-    if(arguments.length==3){
-        this.fullYear=fullYear;
-        this.month=month;
-        this.date=date;
-    }else if(arguments.length==1){
+function MyDate(fullYear, month, date) {
+    if (arguments.length == 3) {
+        this.fullYear = fullYear;
+        this.month = month;
+        this.date = date;
+    } else if (arguments.length == 1) {
 
-        let d=arguments[0];
-        if(d instanceof Date || d instanceof MyDate){
-            this.fullYear=d.getFullYear();
-            this.month=d.getMonth();
-            this.date=d.getDate();
-        }else {
-            this.fullYear=d[0];
-            this.month=parseInt(d[1])-1;//月份转化-1
-            this.date=d[2];
+        let d = arguments[0];
+        if (d instanceof Date || d instanceof MyDate) {
+            this.fullYear = d.getFullYear();
+            this.month = d.getMonth();
+            this.date = d.getDate();
+        } else {
+            this.fullYear = d[0];
+            this.month = parseInt(d[1]) - 1;//月份转化-1
+            this.date = d[2];
         }
 
     }
 
 }
-MyDate.prototype.setFullYear=function (fullYear) {
-    this.fullYear=fullYear;
+MyDate.prototype.setFullYear = function (fullYear) {
+    this.fullYear = fullYear;
 }
-MyDate.prototype.setMonth=function (month) {
-    this.month=month;
+MyDate.prototype.setMonth = function (month) {
+    this.month = month;
 }
-MyDate.prototype.setDate=function (date) {
-    this.date=date;
+MyDate.prototype.setDate = function (date) {
+    this.date = date;
 }
 
-MyDate.prototype.getFullYear=function () {
+MyDate.prototype.getFullYear = function () {
     let number = parseInt(this.fullYear);
-    if(isNaN(number)){
-        error('not number:'+this.fullYear);
+    if (isNaN(number)) {
+        error('not number:' + this.fullYear);
     }
     return number;
 }
-MyDate.prototype.getMonth=function () {
+MyDate.prototype.getMonth = function () {
     return parseInt(this.month);
 }
-MyDate.prototype.getDate=function () {
+MyDate.prototype.getDate = function () {
     return parseInt(this.date);
 }
-MyDate.prototype.toString=function () {
-    return this.fullYear+";"+this.month+";"+this.date;
+MyDate.prototype.toString = function () {
+    return this.fullYear + ";" + this.month + ";" + this.date;
 }
 
 function extend_Date() {
@@ -169,7 +169,7 @@ function extend_Date() {
             if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         return fmt;
     };
-    MyDate.prototype.format=function (fmt) {
+    MyDate.prototype.format = function (fmt) {
         var o = {
             "M+": this.getMonth() + 1, //月份
             "d+": this.getDate(), //日
@@ -183,7 +183,6 @@ function extend_Date() {
 // var time1 = new Date().Format("yyyy.MM.dd");
 //     var time2 = new Date().Format("yyyy-MM-dd HH:mm:ss");
 }
-
 
 
 /** 数字金额大写转换(可以处理整数,小数,负数) */
@@ -225,35 +224,34 @@ function deepCopy(source) {
     var result = {};
 
     for (var key in source) {
-        result[key] = typeof source[key] ==='object'? deepCoyp(source[key]) : source[key];
+        result[key] = typeof source[key] === 'object' ? deepCoyp(source[key]) : source[key];
     }
     return result;
 };
 
-function writeXlsx(filename,data) {
+function writeXlsx(filename, data) {
     var buffer = xlsx.build([{name: filename, data: data}]); // Returns a buffer
-    if(filename.indexOf('.xlsx')==-1){
-        filename+='.xlsx';
+    if (filename.indexOf('.xlsx') == -1) {
+        filename += '.xlsx';
     }
-    fs.writeFileSync('生成的excel'+path.sep+filename,buffer);
+    fs.writeFileSync('生成的excel' + path.sep + filename, buffer);
 }
 
 
 function print() {
-    for(let i=0;i<arguments.length;i++){
+    for (let i = 0; i < arguments.length; i++) {
         console.error(arguments[i]);
     }
     console.log('')
 }
 
 function error() {
-    for(let i=0;i<arguments.length;i++){
+    for (let i = 0; i < arguments.length; i++) {
         console.error(arguments[i]);
     }
     console.log('error');
     process.exit();
 }
-
 
 
 /**
@@ -267,8 +265,8 @@ function getDocxTmpDir(file, output_dir) {
     var index = name.lastIndexOf('.');
     var filename = name.substr(0, index);
     //压缩后的文件异步生成，防止命名冲突
-    var docx_dir = output_dir + path.sep + filename+(new Date().getTime() + parseInt(Math.random() * 100000));
-    fs.writeFileSync(output_dir+path.sep+'/log'+(new Date().format('yyyy.MM.dd'))+'.txt',docx_dir+"\r\n",{flag:'a+'});
+    var docx_dir = output_dir + path.sep + filename + (new Date().getTime() + parseInt(Math.random() * 100000));
+    fs.writeFileSync(output_dir + path.sep + '/log' + (new Date().format('yyyy.MM.dd')) + '.txt', docx_dir + "\r\n", {flag: 'a+'});
     return docx_dir;
 }
 
@@ -280,7 +278,7 @@ function createDirIfNonExist(output_dir) {
     //生成output目录ª
     if (!fs.existsSync(output_dir)) {
         fs.mkdirSync(output_dir);
-    }else {
+    } else {
         deleteAll(output_dir);
         fs.mkdirSync(output_dir);
     }
@@ -291,17 +289,17 @@ function createDirIfNonExist(output_dir) {
  * @param output 解压后的目录
  * @param args 最后一个参数作为回调参数
  */
-function unzipFile(file,output,...args) {
-    if(args.length<1){
+function unzipFile(file, output, ...args) {
+    if (args.length < 1) {
         error("unzipFile 需要至少一个file,一个callback参数");
     }
-    let callback=args[args.length-1];
+    let callback = args[args.length - 1];
     let docxTmpDir = getDocxTmpDir(file, output);
     fs.createReadStream(file)
         .pipe(unzip.Extract({path: docxTmpDir}))
         .on('close', function (err) {
             if (err) throw err;
-            callback(docxTmpDir,...args);
+            callback(docxTmpDir, ...args);
         });
 }
 
@@ -358,7 +356,7 @@ function removeEmptyLines(lines) {
     return lines.splice(0, validLines);
 }
 
-function updatePosZd(posZd,zdHeader) {
+function updatePosZd(posZd, zdHeader) {
     let idx = 0;
     for (let i in posZd) {
         if (typeof posZd[i] == "number") {
@@ -370,9 +368,9 @@ function updatePosZd(posZd,zdHeader) {
     }
 }
 
-let posZd={
+let posZd = {
     user: '用户名',
-        sex: '称呼',
+    sex: '称呼',
     lent_code: '出借编号',
     product: '产品名称',
     rate: '利润率',
@@ -409,7 +407,7 @@ module.exports = {
     parseFloatStr,
     removeEmptyLines,
     updatePosZd,
-    posZd:function () {
+    posZd: function () {
         return posZd;
     },
 };

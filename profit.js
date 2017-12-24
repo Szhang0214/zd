@@ -12,6 +12,8 @@ const parseFloatStr = require('./utils').parseFloatStr;
 const removeEmptyLines=require('./utils').removeEmptyLines;
 const updatePosZd=require('./utils').updatePosZd;
 utils.extend_Date();
+const dao=require('./utils/profitdb');
+const wait = require('wait.for');
 
 //账单字段位置
 let posZd = require('./utils').posZd();;
@@ -93,12 +95,48 @@ let interest = {
     }
 };
 
-compute_gains();
-// console.log(zdRows);
-// process.exit(-1);
+let profitDbDict={};
+var jqRows = [];
 
-check_jq_data();
-write_gains_csv();
+dao.getAll(null,function (rows) {
+    rows.forEach(function (row) {
+       profitDbDict[row['lent_code']+row['report_date']]=parseFloatStr(row['profit']);
+    });
+    // console.log(profitDbDict);
+    main();
+});
+
+function main() {
+    compute_gains();
+    check_jq_data();
+
+
+
+    modifyCurMonthProfit();
+    write_gains_csv();
+}
+
+function modifyCurMonthProfit() {
+    let jqProfit = {};
+    jqRows.forEach(function (jqRow,idx) {
+        if(idx==0){//表头
+            return;
+        }
+        parseJqRow(jqRow);
+        if (!(jqRow[posJq.lent_code] in jqProfit)) {
+            jqProfit[jqRow[posJq.lent_code]] = 0.00;
+        }
+        let profitPos = posJq.repay_money;
+        jqProfit[jqRow[posJq.lent_code]] += parseFloatStr(jqRow[profitPos]);
+    });
+    zdRows.forEach(function (zdRow) {
+        let reportDate = new Date(zdRow[posZd.report_date]);
+        //修改本期账单还款金额(利润)
+        if (reportDate.getMonth() == new Date().getMonth()) {
+            zdRow[posZd.profit] = jqProfit[zdRow[posZd.lent_code]].formatMoney();
+        }
+    });
+}
 
 //检查债权列表数据
 function check_jq_data() {
@@ -106,7 +144,6 @@ function check_jq_data() {
     let jqRawLines = utils.readXlsx(jqFile);
     let jqLines = removeEmptyLines(jqRawLines);
     print("请检查债权有效行数:" + jqLines.length);
-    let jqRows = [];
     // printHeader(jqLines);
     let jqHeaderFields = jqLines.splice(0, 1)[0];
     // let jqHeader = jqHeaderFields.join(',');
@@ -294,6 +331,7 @@ function check_jq_data() {
             jqRows.push(newRow);
         }
     });
+
 
     write_jq_csv(jqRows, jqHeader);
     // console.log("-- 新的债权列表 --")
@@ -522,7 +560,11 @@ function compute_money(line) {
         case '年丰盈':
         case '单季丰':
         case '双季盈':
-            newProfit = compute_nfy_month_profit(line[posZd.lent_money], irate, months);
+            // 除了月润通，都从数据库查询
+            // newProfit = compute_nfy_month_profit(line[posZd.lent_money], irate, months);
+            let key = line[posZd.lent_code]+line[posZd.report_date];
+            newProfit=key in profitDbDict ? profitDbDict[key]:'';
+
             break;
         case '月润通':
             // /100/12
@@ -531,9 +573,11 @@ function compute_money(line) {
         default:
             error(`未知产品类型:${product}`);
     }
-    line[posZd.profit] = newProfit;
-
-    formatZdRow(line);
+    function innerFunc(line) {
+        line[posZd.profit] = newProfit;
+        formatZdRow(line);
+    }
+    innerFunc(line);
 }
 //把number或者number字符串进行四舍五入，保留digits小数位,返回number
 function round(num, digits) {

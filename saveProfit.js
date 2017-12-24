@@ -19,11 +19,13 @@ let zdHeader=zdLines.splice(0,1)[0];
 utils.updatePosZd(posZd,zdHeader);
 
 
-console.log(zdLines);
-console.log(zdHeader);
-console.log(posZd);
-
 db.serialize(function () {
+    //
+    // dao.getOne('11','12',function (row) {
+    //     process.exit(-1);
+    //
+    // });
+
     zdLines.forEach(function (zdLine) {
         dao.insertProfits([
             {
