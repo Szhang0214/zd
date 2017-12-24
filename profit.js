@@ -16,7 +16,7 @@ const dao=require('./utils/profitdb');
 const wait = require('wait.for');
 
 //账单字段位置
-let posZd = require('./utils').posZd();;
+let posZd = require('./utils').posZd();
 let zdRawLines = utils.readXlsx(zdFile);//账单数据
 
 let zdLines = removeEmptyLines(zdRawLines);
@@ -110,12 +110,11 @@ function main() {
     compute_gains();
     check_jq_data();
 
-
-
     modifyCurMonthProfit();
     write_gains_csv();
 }
 
+//修改账单最后一行的利润数据
 function modifyCurMonthProfit() {
     let jqProfit = {};
     jqRows.forEach(function (jqRow,idx) {
@@ -316,7 +315,7 @@ function check_jq_data() {
                 case '年丰盈':
                 case '单季丰':
                 case '双季盈':
-                    let irate = interest[zdInfo[product]][parseFloatStr(zdInfo[posZd.rate])];
+                    let irate = interest[product][parseFloatStr(zdInfo[posZd.rate])];
                     repayMoney = compute_nfy_month_profit(newRow[posZd.lent_money], irate, 1);
                     break;
                 case '月润通':
@@ -564,7 +563,6 @@ function compute_money(line) {
             // newProfit = compute_nfy_month_profit(line[posZd.lent_money], irate, months);
             let key = line[posZd.lent_code]+line[posZd.report_date];
             newProfit=key in profitDbDict ? profitDbDict[key]:'';
-
             break;
         case '月润通':
             // /100/12
